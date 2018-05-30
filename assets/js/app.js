@@ -1,6 +1,6 @@
 const sessionSto = () =>{
     let hotels = JSON.parse(sessionStorage.getItem('session'));
-    console.log(hotels);
+    if(hotels){console.log(hotels);}
     let container = document.querySelector('.content');
     let img = document.querySelector('.img');
     if(container){
@@ -16,10 +16,9 @@ const sessionSto = () =>{
                     <div class="col-md-8 offset-0">
                         <div class="itemlabel3">
                             <div class="labelright">
-                                <img src="../images/filter-rating-5.png" width="60" alt=""/><br/><br/><br/>
-                                <img src="../images/user-rating-5.png" width="60" alt=""/><br/>
                                 <span class="size11 grey">18 Reviews</span><br/><br/>
-                                <span class="green size18"><b>$.${hotel.price}</b></span><br/>
+                                <span class="green size18"><b>${hotel.price}</b></span><br/>
+                                <span class="green size18"><b>${hotel.price2}</b></span><br/>
                                 <span class="size11 grey">avg/night</span><br/><br/><br/>
                                 <form action="details.html">
                                 <a class="bookbtn mt1" href="http://www.booking.com.${hotel.link}" type="submit">Ver habitaciones</a>	
@@ -57,29 +56,25 @@ const sessionSto = () =>{
                 <div class="clearfix"></div>       
                 <div class="offset-2"><hr class="featurette-divider3"></div>        
             `;
-            if(container){
-                container.insertAdjacentHTML('beforeEnd', allData);
-            }
+            if(container){container.insertAdjacentHTML('beforeEnd', allData);}
         }
+    }else{
+        console.log("error");
     }
 } 
+
 
 const drawDataList = e => {
     let container = document.querySelector('.content'),
     allData = '',
     hotels = e.scrapped; 
-    sessionStorage.setItem('session',JSON.stringify(hotels));
-    idLogin = e.scrapped;
-    for(let idLog of idLogin){
-        console.log(idLogin[0].id);
-    //  let link = idLogin[1].link;
-    }
+    if(hotels){sessionStorage.setItem('session',JSON.stringify(hotels));}
 }
 // // draw  in the app
   // init ajaxApi
-  const searchHotel = (inputCity,inputCheckin,inputCheckout,inputRooms,inputAdults,inputChildrens,res) =>{
+  const searchHotel = (inputCity,inputCheckin,inputCheckout,inputRooms,inputAdults,inputChildrens) =>{
     let api = new XMLHttpRequest();
-    api.open('POST','https://cd1ff027.ngrok.io/api/v1/scrap');
+    api.open('POST','https://adb20920.ngrok.io/api/v1/scrap');
     api.setRequestHeader('Content-Type','application/json');
     api.onprogress = () =>{
         console.log('On load');
@@ -89,25 +84,25 @@ const drawDataList = e => {
             let response = JSON.parse(api.responseText);
             drawDataList(response);
             sessionSto();
-            //   let res = idLogin[0].id;
             console.log(response);
         }
     }
     api.send(JSON.stringify({
-    //   "endpoint":"","destiny":{"idcity":"-592318","type":"city","city":inputCity},"checkin":inputCheckin,"checkout":inputCheckout,"room":{"id":1,"quantity":inputRooms},"adult":{"id":2,"quantity":inputAdults},"child":""
-    // "endpoint":{"id":1,"name":"Search","endpoint":"searchresults.es.html?","site_id":"1"},"destiny":{"idcity":localStorage.getItem('idcityApp'),"type":"city","city":inputCity},"checkin":inputCheckin,"checkout":inputCheckout,"room":{"id":2,"quantity":inputRooms},"adult":{"id":2,"quantity":inputAdults},"child":"","site":{"id":1,"name":"Booking","domain":"booking.com"}
-    "endpoint":{"id":1,"name":"Search","endpoint":"searchresults.es.html?","site_id":"1"},"destiny":{"idcity":"-592318","type":"city","city":inputCity},"checkin":inputCheckin,"checkout":inputCheckout,"room":{"id":2,"quantity":inputRooms},"adult":{"id":2,"quantity":inputAdults},"child":"","site":{"id":1,"name":"Booking","domain":"booking.com"}
-    
-    }))
+        // "endpoint":{"id":1,"name":"Search","endpoint":"searchresults.es.html?","site_id":"1"},"destiny":{"idcity":inputCity,"type":"city","city":inputCity},"checkin":inputCheckin,"checkout":inputCheckout,"room":{"id":inputRooms,"quantity":inputRooms},"adult":{"id":inputAdults,"quantity":inputAdults},"child":"","site":{"id":1,"name":"Booking","domain":"booking.com"}
+    // "endpoint":{"id":1,"name":"Search","endpoint":"searchresults.es.html?","site_id":"1"},"destiny":{"idcity":inputCity,"type":"city","city":inputCity},"checkin":inputCheckin,"checkout":inputCheckout,"room":{"id":inputRooms,"quantity":inputRooms},"adult":{"id":inputAdults,"quantity":inputAdults},"child":"","site":{"id":1,"name":"Booking","domain":"booking.com"}
+    // "endpoint":{"id":1,"name":"Search","endpoint":"searchresults.es.html?","site_id":"1"},"destiny":{"idcity":localStorage.getItem("idcityApp"),"type":"city","city":inputCity},"checkin":inputCheckin,"checkout":inputCheckout,"room":{"id":1,"quantity":inputRooms},"adult":{"id":1,"quantity":inputAdults},"child":"","site":{"id":1,"name":"Booking","domain":"booking.com"}
+    "endpoint":{"id":1,"name":"Search","endpoint":"searchresults.es.html?","site_id":"1"},"destiny":{"idcity":inputCity,"type":"city","city":inputCity},"checkin":inputCheckin,"checkout":inputCheckout,"room":{"id":inputRooms,"quantity":inputRooms},"adult":{"id":inputAdults,"quantity":inputAdults},"child":{"id":inputChildrens,"quantity":inputChildrens},"site":{"id":1,"name":"Booking","domain":"booking.com"}
+    // "endpoint":"","destiny":{"idcity":inputCity,"type":"city","city":inputCity},"checkin":inputCheckin,"checkout":inputCheckout,"room":{"id":1,"quantity":inputRooms},"adult":{"id":3,"quantity":inputAdults},"child":""
+    })) 
   }
   // get data
   const getDataList = () =>{
-      let inputCity= document.getElementById('city-app').value,
-      inputCheckin= document.getElementById('checkin-app').value,
-      inputCheckout= document.getElementById('checkout-app').value,
-      inputRooms= document.getElementById('rooms-app').value,
-      inputAdults= document.getElementById('adults-app').value,
-      inputChildrens= document.getElementById('childrens-app').value;
+      let inputCity  =  document.getElementById('city-app').value,
+      inputCheckin   =  document.getElementById('checkin-app').value,
+      inputCheckout  =  document.getElementById('checkout-app').value,
+      inputRooms     =  document.getElementById('rooms-app').value,
+      inputAdults    =  document.getElementById('adults-app').value,
+      inputChildrens =  document.getElementById('childrens-app').value;
       return{inputCity,inputCheckin,inputCheckout,inputRooms,inputAdults,inputChildrens};
   }
   const getEventList = () =>{ 
@@ -117,10 +112,9 @@ const drawDataList = e => {
           searchHotel(objectList.inputCity,objectList.inputCheckin,objectList.inputCheckout,objectList.inputRooms,objectList.inputAdults,objectList.inputChildrens)
       });
   }
-  if(document.getElementById("sendData")){
-      getEventList();
-  }
+  if(document.getElementById("sendData")){  getEventList() ;}
 // //   searchHotel(); 
 
-sessionSto();
+sessionSto()
+
 

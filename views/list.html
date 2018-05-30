@@ -29,9 +29,10 @@
 	<link rel="stylesheet" href="../assets/css/app.css">
     <!-- Picker UI-->	
 	<link rel="stylesheet" href="../assets/css/jquery-ui.css" />		
-	
-    <!-- jQuery -->	
-    <script src="../assets/js/jquery.v2.0.3.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+
+
 	
 	
   </head>
@@ -102,24 +103,25 @@
 			<div class="col-md-3 filters offset-0">
 				<!-- END OF BOOK FILTERS -->	
 				<div>
-                <form action="" class="form-app2" method="POST">
-                    <h3 class="h3-info">Buscar</h3>
-                    <p class="p-info">Desde casas acogedoras hasta modernos apartamentos</p>
-                    <div class="div-father-input-from2">
-                        <input type="text" id="city-app" class="form-control" placeholder="¿Adónde vas?">
-                    </div>
-                    <div class="div-father-dates2">
-                        <input type="date" id="checkin-app" class="input-date2" placeholder="Check In">
-                        <input type="date" id="checkout-app" class="input-date2" placeholder="Check Out" >
-                    </div>
-                    <div class="div-father-dates2">
-                        <input type="number" id="rooms-app" class="input-adults2" placeholder="Habitaciones" >
-                        <input type="number" id="adults-app" class="input-adults2" placeholder="Adultos"  >
-                        <input type="number" id="childrens-app"  class="input-childrens2" placeholder="Niños">
-                    </div>
-                    <button type="button" id="sendData"  class="button-send2" onclick="getEventList()">Enviar</button>
+					<form action="" class="form-app2" method="POST"  autocomplete="on">
+							<h3 class="h3-info">Buscar</h3>
+							<p class="p-info">Desde casas acogedoras hasta modernos apartamentos</p>
+							<div class="div-father-input-from2">
+								<select class="input-adults2" name="itemName"  id="city-app" 
+								></select>
+							</div>
+							<div class="div-father-dates2">
+									<input type="date" id="checkin-app" class="input-date2" placeholder="Check In" value="">
+									<input type="date" id="checkout-app" class="input-date2" placeholder="Check Out" value="">
+							</div>
+							<div class="div-father-dates2">
+									<input type="number" id="rooms-app" class="input-adults2" placeholder="Habitaciones" >
+									<input type="number" id="adults-app" class="input-adults2" placeholder="Adultos"  >
+									<input type="number" id="childrens-app"  class="input-childrens2" placeholder="Niños">
+							</div>
+							<a href="list.html" id="sendData"  class="button-send2" >Enviar</a>
 			    </form>
-                </div>
+        </div>
 				<div class="line2"></div>
 				
 				<div class="padding20title"><h3 class="opensans dark">Filtros:</h3></div>
@@ -408,40 +410,72 @@
 				<label for="">hoteles</label>
 			</div>
 		</div>
+		<script src="../assets/js/jquery-1.9.1.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+		<script type="text/javascript">
+	    $('#sendData').click(function(e){
+            e.preventDefault();
+            setTimeout(function(){
+                window.location.href = "list.html"    
+                console.log("listo");
+            },25000);
+		});
+	$('#city-app').select2({ 
+      placeholder: 'Selecciona ciudad',
+      ajax: {
+        url: 'https://adb20920.ngrok.io/api/v1/cities',
+        dataType: 'json',
+        delay: 250,
+        processResults: function (data) {
+          return {
+            results:  $.map(data, function (item) {
+				return {
+					  // local:sessionStorage.setItem("idcityApp", JSON.stringify(item.id)),
+                      text: item.city,
+                      id: item.id
+                  }
+              })
+          };
+        },
+        cache: true
+      }
+	});
+	</script>
 		<!-- endmenumobile -->
     <!-- end content app list -->
-	<script defer src="https://use.fontawesome.com/releases/v5.0.12/js/all.js" integrity="sha384-Voup2lBiiyZYkRto2XWqbzxHXwzcm4A5RfdfG6466bu5LqjwwrjXCMBQBLMWh7qR" crossorigin="anonymous"></script>
-    <!-- Javascript -->
-	<script src="../assets/js/app.js"></script>
-    <!-- This page JS -->
-	<script src="../assets/js/js-index3.js"></script>	
+		<script defer src="https://use.fontawesome.com/releases/v5.0.12/js/all.js" integrity="sha384-Voup2lBiiyZYkRto2XWqbzxHXwzcm4A5RfdfG6466bu5LqjwwrjXCMBQBLMWh7qR" crossorigin="anonymous"></script>
+		<!-- Javascript -->
+		<script src="../assets/js/app.js"></script>
+			<!-- This page JS -->
+		<script src="../assets/js/js-index3.js"></script>	
+		
+			<!-- Custom functions -->
+			<script src="../assets/js/functions.js"></script>
+		
+			<!-- Picker UI-->	
+		<script src="../assets/js/jquery-ui.js"></script>		
+		
+		<!-- Easing -->
+			<script src="../assets/js/jquery.easing.js"></script>
+		
+			<!-- jQuery KenBurn Slider  -->
+			<script type="text/javascript" src="../rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+		
+		 <!-- Nicescroll  -->	
+		<script src="../assets/js/jquery.nicescroll.min.js"></script>
+		
+			<!-- CarouFredSel -->
+			<script src="../assets/js/jquery.carouFredSel-6.2.1-packed.js"></script>
+			<script src="../assets/js/helper-plugins/jquery.touchSwipe.min.js"></script>
+		<script type="text/javascript" src="../assets/js/helper-plugins/jquery.mousewheel.min.js"></script>
+		<script type="text/javascript" src="../assets/js/helper-plugins/jquery.transit.min.js"></script>
+		<script type="text/javascript" src="../assets/js/helper-plugins/jquery.ba-throttle-debounce.min.js"></script>
+		
+			<!-- Custom Select -->
+		<script type='text/javascript' src='../assets/js/jquery.customSelect.js'></script>	
 	
-    <!-- Custom functions -->
-    <script src="../assets/js/functions.js"></script>
-	
-    <!-- Picker UI-->	
-	<script src="../assets/js/jquery-ui.js"></script>		
-	
-	<!-- Easing -->
-    <script src="../assets/js/jquery.easing.js"></script>
-	
-    <!-- jQuery KenBurn Slider  -->
-    <script type="text/javascript" src="../rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-	
-   <!-- Nicescroll  -->	
-	<script src="../assets/js/jquery.nicescroll.min.js"></script>
-	
-    <!-- CarouFredSel -->
-    <script src="../assets/js/jquery.carouFredSel-6.2.1-packed.js"></script>
-    <script src="../assets/js/helper-plugins/jquery.touchSwipe.min.js"></script>
-	<script type="text/javascript" src="../assets/js/helper-plugins/jquery.mousewheel.min.js"></script>
-	<script type="text/javascript" src="../assets/js/helper-plugins/jquery.transit.min.js"></script>
-	<script type="text/javascript" src="../assets/js/helper-plugins/jquery.ba-throttle-debounce.min.js"></script>
-	
-    <!-- Custom Select -->
-	<script type='text/javascript' src='../assets/js/jquery.customSelect.js'></script>	
-
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../dist/js/bootstrap.min.js"></script>
+			<!-- Include all compiled plugins (below), or include individual files as needed -->
+			<script src="../dist/js/bootstrap.min.js"></script>
   </body>
 </html>

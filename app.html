@@ -81,7 +81,7 @@
 				<h3 class="h3-info">Encuentra ofertas para todas las temporadas</h3>
 				<p class="p-info">Desde casas acogedoras hasta modernos apartamentos</p>
 				<div class="div-father-input-from">
-					<select class="itemName form-control col-xs-12" style="width:500px;" name="itemName"  id="city-app" 
+					<select class="input-date" name="itemName"  id="city-app" 
 					></select>
 				</div>
 				<div class="div-father-dates">
@@ -90,7 +90,7 @@
 				</div>
 				<div class="div-father-dates">
 					<input type="number" id="rooms-app" class="input-adults" placeholder="Habitaciones" >
-					<input type="number" id="adults-app" class="input-adults" placeholder="Adultos"  >
+					<input type="number" id="adults-app" class="input-adults" placeholder="Adultos">
 					<input type="number" id="childrens-app"  class="input-childrens" placeholder="Niños">
 				</div>
 				<a href="views/list.html" id="sendData"  class="button-send" >Enviar</a>
@@ -336,19 +336,19 @@
             setTimeout(function(){
                 window.location.href = "views/list.html"    
                 console.log("listo");
-            },8000);
+            },55000);
 		});
 	$('#city-app').select2({ 
       placeholder: 'Selecciona ciudad',
       ajax: {
-        url: 'https://cd1ff027.ngrok.io/api/v1/cities',
+        url: 'https://adb20920.ngrok.io/api/v1/cities',
         dataType: 'json',
         delay: 250,
         processResults: function (data) {
           return {
             results:  $.map(data, function (item) {
 				return {
-					  local:localStorage.setItem('idcityApp', item.id),
+					//   local:localStorage.setItem("idcityApp",(item.id)),
                       text: item.city,
                       id: item.id
                   }
