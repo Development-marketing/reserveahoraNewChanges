@@ -2,7 +2,6 @@ const sessionSto = () =>{
     let hotels = JSON.parse(sessionStorage.getItem('session'));
     if(hotels){console.log(hotels);}
     let container = document.querySelector('.content');
-    let img = document.querySelector('.img');
     if(container){
         for(let hotel of hotels){
             allData = ` 
@@ -16,27 +15,28 @@ const sessionSto = () =>{
                     <div class="col-md-8 offset-0">
                         <div class="itemlabel3">
                             <div class="labelright">
-                                <span class="size11 grey">18 Reviews</span><br/><br/>
-                                <span class="green size18"><b>${hotel.price}</b></span><br/>
-                                <span class="green size18"><b>${hotel.price2}</b></span><br/>
-                                <span class="size11 grey">avg/night</span><br/><br/><br/>
-                                <form action="details.html">
-                                <a class="bookbtn mt1" href="http://www.booking.com.${hotel.link}" type="submit">Ver habitaciones</a>	
-                                </form>			
-                            </div>
-                            <div class="labelleft2">			
-                                <h3 class="h3-titleHotel"><a href="http://www.booking.com.${hotel.link}">${hotel.name}</a></h3 class="h3-titleHotel">
-                                <p class="grey">
-                                <div class="div-father-addres">
-                                    <i class="fas fa-map-marker-alt fa-2x"></i>
-                                    <p>${hotel.direccion}</p>
-                                </div>
                                 <div class="div-score">
                                     <p>Puntuación</p>
                                     <div class="div-scoreCircle">
                                         <h4 class="h4-pricehotel">${hotel.score}</h4>
                                     </div>
                                 </div>
+                                <span class="green size18"><b>${hotel.price}</b></span><br/>
+                                <span class="green size18"><b>${hotel.price2}</b></span><br/>
+                                <br></br><br></br>
+                                <form action="details.html">
+                                <a href="details.html"type="submit">Ver habitaciones</a>	
+                                </form>			
+                            </div>
+                            <div class="labelleft2">			
+                                <h3 class="h3-titleHotel"><a href="details.html" id="sendData">${hotel.name}</a></h3 class="h3-titleHotel">
+                                <p class="grey">
+                                <div class="div-father-addres">
+                                    <i class="fas fa-map-marker-alt fa-1x"></i>
+                                    <p>${hotel.direccion}</p><p class="p-kilometers">[ ${hotel.kilometers} ]</p>
+                                </div>
+                                <p>${hotel.recommendation}</p>
+                                <p>${hotel.services}</p>
                                 <ul class="hotelpreferences">
                                     <li class="icohp-internet"></li>
                                     <li class="icohp-air"></li>
@@ -74,7 +74,7 @@ const drawDataList = e => {
   // init ajaxApi
   const searchHotel = (inputCity,inputCheckin,inputCheckout,inputRooms,inputAdults,inputChildrens) =>{
     let api = new XMLHttpRequest();
-    api.open('POST','https://adb20920.ngrok.io/api/v1/scrap');
+    api.open('POST','https://3322d6fd.ngrok.io/api/v1/scrap');
     api.setRequestHeader('Content-Type','application/json');
     api.onprogress = () =>{
         console.log('On load');
