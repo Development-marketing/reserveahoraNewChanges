@@ -105,12 +105,14 @@
 	/* background-image:url('../../../src/images/background.jpg');
 	background-size: cover;
 	background-position: center;
-	background-attachment: fixed; */
+    background-attachment: fixed; */
+    background-image: linear-gradient(#27ae60,#27ae60 );
+    border-bottom-left-radius: 80% 20%;
+    border-bottom-right-radius: 80% 20%;
 	background-color:#e6ecf0;
 	height:50vh !important;
 	justify-content: space-around;
 	align-items: center;
-	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 .div-calendar{
 	background:#001371;
@@ -202,9 +204,9 @@
 	}
 	.div-content-slider iframe{
 		position: absolute;
-		z-index: 1;
+        z-index: 1;
+        border-radius: 50%;
 		margin:-18vh 8.8vh;
-		border-radius: 50%;
 	}
 /* end styles app */
 /* sytles container */
@@ -522,9 +524,11 @@ display: flex;justify-content: center;align-items: center;border:3px solid white
 .listitem2{border-top-left-radius:5px;border-bottom-left-radius:5px;}
 /* end styles list module */
 /* init styles details */
+.mediafix1{height:25vh !important;}
 .detailsApp{
     height:240vh;
 }
+.h4App{display: flex;justify-content: space-around;align-items: center;flex-direction: column;}
 @media (max-width:1200px) {
     .a-logo-maxwidth,.call-center,.div-content-slider,.div-contenedorSession,.divContentLogo,
     .divContentItems div:nth-child(4),.div-slider{display: none;}

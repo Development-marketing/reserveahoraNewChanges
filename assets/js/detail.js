@@ -5,9 +5,47 @@ const sessionSto = () =>{
     if(detail){
         for(dataDetailapp of detailApp){
             let tipo_habitacion = dataDetailapp.Tipo_habitacion;
-            for(let i = 0; i < tipo_habitacion.length; i++){
-                console.log(tipo_habitacion[i]);
+                for(let i = 0; i < tipo_habitacion.length; i++){
+                    let detail = document.querySelector('.detailsApp');
+                    const value = document.createElement('p');
+                    value.textContent = tipo_habitacion[i];
+                    document.body.appendChild(value);
             }
+            let servicioPorTipoHabitacion = dataDetailapp.servicios_por_tipo_habitacion;
+                for(let i =0; i < servicioPorTipoHabitacion.length; i++){
+                    let detail = document.querySelector('.detailsApp');
+                    const value = document.createElement('p');
+                    value.textContent = servicioPorTipoHabitacion[i];
+                    document.body.appendChild(value);
+                }
+                let precioApp = dataDetailapp.precio;
+                for(i =0; i< precioApp.length; i ++){
+                    let detail = document.querySelector('.detailsApp');
+                    const value = document.createElement('p');
+                    value.textContent = precioApp[i];
+                    document.body.appendChild(value);
+                }
+                let ocupacionApp = dataDetailapp.Ocupacion;
+                for(i =0; i < ocupacionApp.length; i++){
+                    let detail = document.querySelector('.detailsApp');
+                    const value = document.createElement('p');
+                    value.textContent = ocupacionApp[i];
+                    document.body.appendChild(value);
+                }
+                let opcionesApp = dataDetailapp.opciones;
+                for(i =0; i < opcionesApp.length; i++){
+                    let detail = document.querySelector('.detailsApp');
+                    const value = document.createElement('p');
+                    value.textContent = opcionesApp[i];
+                    document.body.appendChild(value);
+                }
+                let  disponibilidadApp = dataDetailapp.disponibilidad;
+                for(i =0; i < disponibilidadApp.length; i++){
+                    let detail = document.querySelector('.detailsApp');
+                    const value = document.createElement('p');
+                    value.textContent = disponibilidadApp[i];
+                    document.body.appendChild(value);
+                }
             dataDetails = `
             <div class="container">
             <div class="container pagecontainer offset-0">	
@@ -1086,7 +1124,7 @@ const drawListDetails = e => {
 }
 const detailsHotel = () =>{
     let detailsapi = new XMLHttpRequest();
-    detailsapi.open('POST','https://0b1cda4c.ngrok.io/api/v1/scraphotel');
+    detailsapi.open('POST','https://c40d0c85.ngrok.io/api/v1/scraphotel');
     detailsapi.setRequestHeader('Content-Type','application/json');
     detailsapi.onprogress = () =>{
         console.log('On load');
@@ -1100,7 +1138,7 @@ const detailsHotel = () =>{
         }
     }
     detailsapi.send(JSON.stringify({
-        "url":"https://www.booking.com/hotel/co/47-medellin-street.es.html?label=gen173nr-1DCAEoggJCAlhYSDNYBGgyiAEBmAEKwgEKd2luZG93cyAxMMgBDNgBA-gBAZICAXmoAgM;sid=f536e01135849fa281a045c23454b51e;all_sr_blocks=109232001_116190678_0_1_0;bshb=2;checkin=2018-06-13;checkout=2018-06-14;dest_id=-592318;dest_type=city;dist=0;group_adults=2;hapos=1;highlighted_blocks=109232001_116190678_0_1_0;hpos=1;room1=A%2CA;sb_price_type=total;srepoch=1527876130;srfid=330f2535246ce561a93f9e9c96e1485a808322edX1;srpvid=f81f7ed0d90a0180;type=total;ucfs=1&#hotelTmpl","id":"261533"
+        "url":"https://www.booking.com/hotel/co/aparta-bulerias.es.html?label=gen173nr-1FCAsoMkINc3VpdGVzLXJlY3Jlb0gKWARoMogBAZgBCsIBA3gxMcgBDNgBAegBAfgBA5ICAXmoAgM&sid=a592380752e948df9dce047d8a6b5b96&checkin=2018-06-08&checkout=2018-06-09&ucfs=1&srpvid=769f673ff4e200c6&srepoch=1528209663&highlighted_blocks=272712801_106314322_0_2_0&all_sr_blocks=272712801_106314322_0_2_0&bshb=2&room1=A,A&hpos=1&hapos=1&dest_type=city&dest_id=-592318&dotd_fb=1&srfid=2f72fd444ca9c7cfe2f6ecf7b7564eb345ba19a0X1&from=searchresults;from_hc_img=1#hotelTmpl","id":"261533"
     }))  
   }
 detailsHotel();
