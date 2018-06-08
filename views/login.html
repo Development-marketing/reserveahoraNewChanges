@@ -77,115 +77,33 @@
 	</div>
 
 
-    <div class="container breadcrub ">
-	    <div>
-			<a class="homebtn left" href="#"></a>
-			<div class="left">
-				<ul class="bcrumbs">
-					<li>/</li>
-					<li><a href="#">Hotels</a></li>
-					<li>/</li>
-					<li><a href="#">U.S.A.</a></li>
-					<li>/</li>					
-					<li><a href="#" class="active">New York</a></li>					
-				</ul>				
-			</div>
-			<a class="backbtn right" href="#"></a>
-		</div>
-		<div class="clearfix"></div>
-		<div class="brlines"></div>
-	</div>	
-
-    	<!-- CONTENT -->
-        <div class="detailsApp">
-
+    <div class="div-loginApp">
+        <div class="div-row1Applogin">
+            <h1>Hola</h1>
         </div>
-
-		
-    	<!-- footer -->
-	<div class="div-footerApp">
-		<div class="divContentLogo">
-			<img src="../images/reserve.png" alt="">
-		</div>
-		<div class="divContentItems">
-			<div>
-				<a href="#">Hola</a>
-				<a href="#">Hola</a>
-				<a href="#">Hola</a>
-				<a href="#">Hola</a>
-			</div>
-			<div>
-				<a href="#">Hola</a>
-				<a href="#">Hola</a>
-				<a href="#">Hola</a>
-				<a href="#">Hola</a>
-			</div>
-			<div>
-				<a href="#">Hola</a>
-				<a href="#">Hola</a>
-				<a href="#">Hola</a>
-				<a href="#">Hola</a>                    
-			</div>
-			<div>
-			</div>                
-		</div>
-	</div>
-	<div class="div-social">
-		<div class="div-subSocial">
-			<a href="#" class="social1b"><img src="../images/icon-facebook.png" alt=""/></a>
-			<a href="#" class="social2b"><img src="../images/icon-twitter.png" alt=""/></a>
-			<a href="#" class="social3b"><img src="../images/icon-gplus.png" alt=""/></a>
-			<a href="#" class="social4b"><img src="../images/icon-youtube.png" alt=""/></a>
-		</div>
+        <div class="div-row2Applogin">
+            <form action="" method="" id="">
+                <img src="../images/Reserve-Ahora.png" alt="">
+                <h1>Iniciar</h1>
+                <div class="div-fatherInput">
+                    <input type="text" placeholder="Hola">
+                </div>
+                <div class="div-fatherInput">
+                    <input type="text" placeholder="Hola">
+                </div>
+                <button>Iniciar</button>
+                <div class="div-aItems">
+                    <a href="#">No tienes cuenta</a>
+                    <a href="#">Olvidaste tu contraseña</a>
+                </div>
+            </form>
+        </div>
     </div>
-	<!-- end foooter -->
-		<!-- menumobile -->
-		<div class="div-menu-mobile">
-			<div class="div-item-mobile">
-				<a href="#"><i class="fas fa-home fa"></i></a>
-				<label for="">hoteles</label>
-			</div>
-			<div class="div-item-mobile">
-				<a href="#"><i class="fas fa-home fa"></i></a>
-				<label for="">hoteles</label>
-			</div>
-			<div class="div-item-mobile">
-				<a href="#"><i class="fas fa-home fa"></i></a>
-				<label for="">hoteles</label>
-			</div>
-		</div>
+
+
 		<script src="../assets/js/jquery-1.9.1.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
-		<script type="text/javascript">
-	    $('#sendData').click(function(e){
-            e.preventDefault();
-            setTimeout(function(){
-                window.location.href = "list.html"    
-                console.log("listo");
-            },5000);
- 		});
-	$('#city-app').select2({
-      placeholder: 'Selecciona ciudad',
-      ajax: {
-        url: 'https://label-hidden/api/v1/cities',
-        dataType: 'json',
-        delay: 250,
-        processResults: function (data) {
-          return {
-            results:  $.map(data, function (item) {
-				return {
-					  // local:sessionStorage.setItem("idcityApp", JSON.stringify(item.id)),
-                      text: item.city,
-                      id: item.id
-                  }
-              })
-          };
-        },
-        cache: true
-      }
-	});
-	</script>
 		<!-- endmenumobile -->
     <!-- end content app list -->
 		<script defer src="https://use.fontawesome.com/releases/v5.0.12/js/all.js" integrity="sha384-Voup2lBiiyZYkRto2XWqbzxHXwzcm4A5RfdfG6466bu5LqjwwrjXCMBQBLMWh7qR" crossorigin="anonymous"></script>

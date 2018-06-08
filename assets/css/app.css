@@ -528,7 +528,115 @@ display: flex;justify-content: center;align-items: center;border:3px solid white
 .detailsApp{
     height:240vh;
 }
+.seeRooms{background: #001371;padding:15px;color: white;font-family: 'Roboto';}
+.label-hidden{
+    width:60%;
+    display:flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top: -3vh;
+    height: 5vh;
+}
+.seeRooms:hover{text-decoration: none;color: white;}
 .h4App{display: flex;justify-content: space-around;align-items: center;flex-direction: column;}
+/* login app styles */
+.div-loginApp{
+    width: 100%;
+    height: 100vh;
+    background: #e6ecf0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div-row1Applogin{
+    width: 40%;
+    background-image: url("../../images/apartament.jpg");
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+}
+.div-row2Applogin{
+    background: #cee2f2;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.div-row2Applogin form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:70%;
+    height:60vh;
+    padding-bottom: 5vh;
+}
+.div-row2Applogin img{
+    width: 100px;
+    height: auto;
+}
+.div-row2Applogin h1{
+    font-size:45px;
+    font-family: 'Roboto';
+    color: #555;
+}
+.div-fatherInput{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div-fatherInput input{
+    width: 90%;
+    height: 5vh;
+    border: none;
+    margin: 1vh;
+    padding-left: 1vh;
+    border-radius: 6px;
+    font-family: 'Roboto';
+    outline: none;
+    transition: .2s all ease;
+}
+.div-fatherInput input:focus{
+    background: none;
+    border-bottom: 2px solid #2980b9;
+    transition: .2s all ease-in;
+}
+.div-row2Applogin button{
+    background: #ff0000;
+    border: none;
+    width:40vh;
+    margin-top: 5vh;
+    height: 6vh;
+    border-radius: 6px;
+    color: white;
+    font-family: 'Roboto';
+    font-size: 18px;
+}
+.div-aItems{
+    width: 55vh;
+    height: 7vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5vh;
+}
+.div-aItems a{
+    height: 6vh;
+    background: #001371;
+    color: white;
+    width:40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:6px;
+}
+/* end login app styles */
 @media (max-width:1200px) {
     .a-logo-maxwidth,.call-center,.div-content-slider,.div-contenedorSession,.divContentLogo,
     .divContentItems div:nth-child(4),.div-slider{display: none;}

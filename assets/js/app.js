@@ -28,11 +28,11 @@ const sessionSto = () =>{
                                 <span class="green size18"><b>${hotel.price2}</b></span><br/>
                                 <br></br><br></br>
                                 <form action="details.html">
-                                <a href="details.html"type="submit">Ver habitaciones</a>	
+                                <a href="details.html"type="submit" class="seeRooms">Ver habitaciones</a>	
                                 </form>			
                             </div>
                             <div class="labelleft2">			
-                                <h3 class="h3-titleHotel"><a href="details.html" id="sendData">${hotel.name}</a></h3 class="h3-titleHotel">
+                                <h3 class="h3-titleHotel"><a href="details.html" id="hotelName" name="https://www.booking.com${hotel.link}">${hotel.name}</a><a href="details.html" class="label-hidden" id="label-getLink"></a></h3 class="h3-titleHotel">
                                 <p class="grey">
                                 <div class="div-father-addres">
                                     <i class="fas fa-map-marker-alt fa-1x"></i>
@@ -242,6 +242,7 @@ const sessionSto = () =>{
             <div class="container mt25 offset-0">
     
                 <div class="col-md-8 pagecontainer2 offset-0">
+
             
                     <ul class="nav nav-tabs" id="myTab">
                         <li onclick="mySelectUpdate()" class=""><a data-toggle="tab" href="#summary"><span class="summary"></span><span class="hidetext">Summary</span>&nbsp;</a></li>
@@ -1104,7 +1105,7 @@ const drawListDetails = e => {
   // init ajaxApi
   const searchHotel = (inputCity,inputCheckin,inputCheckout,inputRooms,inputAdults,inputChildrens) =>{
     let api = new XMLHttpRequest();
-    api.open('POST','https://be0a8ee7.ngrok.io/api/v1/scrap');
+    api.open('POST','https://e967d2d0.ngrok.io/api/v1/scrap');
     api.setRequestHeader('Content-Type','application/json');
     api.onprogress = () =>{
         console.log('On load');
@@ -1144,38 +1145,54 @@ const drawListDetails = e => {
   }
   if(document.getElementById("sendData")){  getEventList() ;}
 // //   searchHotel(); 
-const detailsHotel = (value) =>{
-    let detailsapi = new XMLHttpRequest();
-    detailsapi.open('POST','https://be0a8ee7.ngrok.io/api/v1/scraphotel');
-    detailsapi.setRequestHeader('Content-Type','application/json');
-    detailsapi.onprogress = () =>{
-        console.log('On load');
-    }
-    detailsapi.onload = () => {
-        if (detailsapi.status === 200) {
-            let response = JSON.parse(detailsapi.responseText);
-            drawListDetails(response);
-            sessionSto();
-            // console.log(response);
-            // searchHotel(response[0]);
+
+
+const getdataDetails = () =>{
+    document.getElementById("hotelName").addEventListener("click",() =>{
+      let nameLink = document.getElementById("hotelName").name;
+      let linkName = sessionStorage.setItem('sessionName', nameLink);
+      alert(nameLink);
+      console.log(nameLink);
+    });
+}
+const detailsHotel = (nameLink) =>{
+        let detailsapi = new XMLHttpRequest();
+        detailsapi.open('POST','https://e967d2d0.ngrok.io/api/v1/scraphotel');
+        detailsapi.setRequestHeader('Content-Type','application/json');
+        // let getName = sessionStorage.getItem('sessionName',nameLink);
+        let getName = "https://www.booking.com/hotel/co/dann-carlton-medellin.es.html?label=gen173nr-1FCAsoMkINc3VpdGVzLXJlY3Jlb0gKWARoMogBAZgBCsIBA3gxMcgBDNgBAegBAfgBA5ICAXmoAgM;sid=56390497a9497f8dd53534e443114c94;checkin=2018-06-09;checkout=2018-06-10;ucfs=1;srpvid=c1697f6e90f00103;srepoch=1528308445;highlighted_blocks=29956602_112716354_0_1_0;all_sr_blocks=29956602_112716354_0_1_0;bshb=2;room1=A%2CA;hpos=2;hapos=2;dest_type=city;dest_id=-592318;srfid=659e242c3fa6acc6b9633490a6c16b303743aeb2X2;from=searchresults;from_hc_img=1#hotelTmpl";
+        console.log(getName);
+        detailsapi.onprogress = () =>{
+            console.log('On load');
         }
-    }
-    detailsapi.send(JSON.stringify({
-        "url":"https://www.booking.com/hotel/co/dann-carlton-medellin.es.html?label=gen173nr-1FCAEoggJCAlhYSDNYBGgyiAEBmAEKwgEKd2luZG93cyAxMMgBDNgBAegBAfgBC5ICAXmoAgM;sid=f536e01135849fa281a045c23454b51e;all_sr_blocks=29956610_112716354_0_1_0;bshb=2;checkin=2018-06-16;checkout=2018-06-17;dest_id=-592318;dest_type=city;dist=0;group_adults=2;hapos=1;highlighted_blocks=29956610_112716354_0_1_0;hpos=1;room1=A%2CA;sb_price_type=total;srepoch=1528379509;srfid=5c75b279591d420cfc2f5429d0f2ea0c5ecdb1caX1;srpvid=fa16617a8313025d;type=total;ucfs=1&#hotelTmpl","id":"261533"
-    }))  
-  }
-  const getdataDetails = () =>{
-    let hotels = JSON.parse(sessionStorage.getItem('session')),
-    value = hotels[0]['link'];
-    console.log(value);
-    return(value);
-  }
-  const getEventDetails = () =>{
-    let objectDetails = getdataDetails();
-        detailsHotel(objectDetails.value)
-  } 
+        detailsapi.onload = () => {
+            if (detailsapi.status === 200) {
+                let response = JSON.parse(detailsapi.responseText);
+                drawListDetails(response);
+                sessionSto();
+            }
+        }
+        detailsapi.send(JSON.stringify({
+            "url":getName
+        }))  
+      }
+      if(document.getElementById("label-getlink")){getdataDetails();}
+
+const getEventDetails = () =>{
+  let objectDetails = getdataDetails();
+      console.log(objectDetails);
+} 
+// 
 detailsHotel();
 sessionSto()
 
 
 
+// JQuery
+$('#hotelName').click(function(e){
+    e.preventDefault();
+    setTimeout(function(){
+        window.location.href = "details.html"    
+        console.log("listo");
+    },10000);
+});
