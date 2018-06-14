@@ -769,6 +769,43 @@ height: auto;padding: 3vh;}
 .div-InfoHotelBook h3{
     color: #4caf50;
 }
+.circlewrap {
+    background-color: #cee2f2;
+    width: 54px;
+    position: relative;
+    height: 54px;
+    border-radius: 50%;
+}
+.circleimg{
+    width: 54px;
+    position: relative;
+    height: 54px;
+}
+.div-comments{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.div-comments img{
+    width: 200px;
+    height: auto;
+    margin-top: 2vh;
+    margin-left: 2vh;
+}
+.lh1{
+    line-height:3vh !important;
+}
+.bookbtn{
+    margin-bottom: 2vh;
+    width: 100%;
+}
+.comentarios{min-height: 200px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 @media (max-width:1200px) {
     .a-logo-maxwidth,.call-center,.div-content-slider,.div-contenedorSession,.divContentLogo,
     .divContentItems div:nth-child(4),.div-slider{display: none;}
