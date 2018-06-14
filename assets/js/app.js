@@ -79,7 +79,7 @@ const drawDataList = e => {
 // init ajaxApi
 const searchHotel = (inputCity, inputCheckin, inputCheckout, inputRooms, inputAdults, inputChildrens) => {
     let api = new XMLHttpRequest();
-    api.open('POST', 'https://158dbc17.ngrok.io/api/v1/scrap');
+    api.open('POST', 'https://8a63ce94.ngrok.io/api/v1/scrap');
     api.setRequestHeader('Content-Type', 'application/json');
     api.onprogress = () => {
         console.log('On load');
@@ -163,7 +163,7 @@ if (true) {
             let nameLink = e.target.name;
             alert(nameLink);
             // session storage
-            let detailApp = JSON.parse(sessionStorage.getItem('sessionDetail'));
+            let detailApp = JSON.parse(sessionStorage.getItem('sessionDetail'));    
             let linkName = sessionStorage.setItem('sessionName', nameLink);
             // draw function in the app
             const drawListDetails = e => {
@@ -185,7 +185,7 @@ if (true) {
             }
             const detailsHotel = (nameLink) => {
                 let detailsapi = new XMLHttpRequest();
-                detailsapi.open('POST', 'https://158dbc17.ngrok.io/api/v1/scraphotel');
+                detailsapi.open('POST', 'https://8a63ce94.ngrok.io/api/v1/scraphotel');
                 detailsapi.setRequestHeader('Content-Type', 'application/json');
                 let getName = sessionStorage.getItem('sessionName', nameLink);
                 console.log(getName);
@@ -224,17 +224,9 @@ const drawHotelDetail = () => {
     if (detailApp) {
         console.log(detailApp);
     }
-    if (detail) {
-        let valueDetail = detailApp.length;
-        console.log(valueDetail);
-        if(valueDetail > 1){
-            let resultDetail1 = detailApp[1];
-            console.log(resultDetail1);
-        }
-        else{
-            let resultDetail1 = detailApp[0];
-            console.log(resultDetail1);
-        }
+    if (detail) {              
+        let ternaryOperator = detailApp.length >1 ? detailApp[1]:detailApp[0];
+        console.log(ternaryOperator);
         for (dataDetailapp of detailApp) {
             let servicioPorTipoHabitacion = dataDetailapp.servicios_por_tipo_habitacion;
             for (let i = 0; i < servicioPorTipoHabitacion.length; i++) {
@@ -276,46 +268,50 @@ const drawHotelDetail = () => {
                     typeRoom.querySelector('h4').appendChild(value);
                 }
                 data = `
-            <div class="col-md-4 offset-0">
-                <a href="#"><img src="${dataDetailapp.imagenes[0]}" alt="" class="fwimg"/></a>
-            </div>
-            <div class="col-md-8 offset-0">
-                <div class="col-md-8 mediafix1" id="typeRoom+${tipo_habitacion[i]}">
-                    <h4 class="opensans dark bold margtop1 lh1 h4App">${tipo_habitacion[i]}</h4>
-                    Ocupacion maxíma: ${dataDetailapp.Ocupacion[0]} adultos
-                    <ul class="hotelpreferences margtop10">
-                        <li class="icohp-internet"></li>
-                        <li class="icohp-air"></li>
-                        <li class="icohp-pool"></li>
-                        <li class="icohp-childcare"></li>
-                        <li class="icohp-fitness"></li>
-                        <li class="icohp-breakfast"></li>
-                        <li class="icohp-parking"></li>
-                    </ul>
+                <div class="divContentDetails">
+                    <div class="col-md-3 offset-0 rowContent1">
+                        <div class="div-circleTypeservice">
+                            <a href="#"><img src="${dataDetailapp.imagenes[2]}" alt="" class="fwimg"/></a>
+                        </div>
+                    </div>
+                    <div class="col-md-9 offset-0">
+                        <div class="col-md-9 mediafix1 contentAppDetails" id="typeRoom+${tipo_habitacion[i]}">
+                            <h4 class="opensans dark bold margtop1 lh1 h4App">${tipo_habitacion[i]}</h4>
+                            Ocupacion maxíma: ${dataDetailapp.Ocupacion[0]} adultos
+                            <ul class="hotelpreferences margtop10">
+                                <li class="icohp-internet"></li>
+                                <li class="icohp-air"></li>
+                                <li class="icohp-pool"></li>
+                                <li class="icohp-childcare"></li>
+                                <li class="icohp-fitness"></li>
+                                <li class="icohp-breakfast"></li>
+                                <li class="icohp-parking"></li>
+                            </ul>
+                            <div class="clearfix"></div>
+                            <ul class="checklist2 margtop10" id="servicesRoom+${servicioPorTipoHabitacion[i]}">
+                                <li>${servicioPorTipoHabitacion[i]}</li>
+                            </ul>									
+                        </div>
+                        <div class="col-md-3 center bordertype4 priceApp" id="priceApp+${precioApp[i]}">
+                            <span class="opensans green size23 "> ${precioApp[i]}</span><br/>
+                            <span class="opensans lightgrey size12" id="opcionesApp"><p></p></span>
+                            <span class="lred bold">
+                            <div id="availabilityApp">
+                            <select>
+                            </select>
+                            </div>
+                            </span>
+                            <button class="bookbtn mt1">Reservar</button>
+                            <div id="opcionesApp+${opcionesApp[i]}">
+                                <p>${opcionesApp[i]}</p>
+                            </div>	
+                            <div class="typeRoom">
+                            </div>
+                        </div>										
+                    </div>
                     <div class="clearfix"></div>
-                    <ul class="checklist2 margtop10" id="servicesRoom+${servicioPorTipoHabitacion[i]}">
-                        <li>${servicioPorTipoHabitacion[i]}</li>
-                    </ul>									
+                    <div class="line2"></div>
                 </div>
-                <div class="col-md-4 center bordertype4" id="priceApp+${precioApp[i]}">
-                    <span class="opensans green size23"> ${precioApp[i]}</span><br/>
-                    <span class="opensans lightgrey size12" id="opcionesApp"><p></p></span>
-                    <span class="lred bold">
-                    <div id="availabilityApp">
-                    <select>
-                    </select>
-                    </div>
-                    <div id="opcionesApp+${opcionesApp[i]}">
-                        <p>${opcionesApp[i]}</p>
-                    </div>
-                    </span>
-                    <button class="bookbtn mt1">Reservar</button>	
-                    <div class="typeRoom">
-                    </div>
-                </div>										
-            </div>
-            <div class="clearfix"></div>
-            <div class="line2"></div>
         `;
                 if (detail) {
                     detail.insertAdjacentHTML('beforeEnd', data);
@@ -815,5 +811,3 @@ const drawHotelDetail = () => {
 if (document.getElementById("detailsApp")) {
     drawHotelDetail();
 }
-
-
