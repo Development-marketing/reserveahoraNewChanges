@@ -769,6 +769,82 @@ height: auto;padding: 3vh;}
 .div-InfoHotelBook h3{
     color: #4caf50;
 }
+.circlewrap {
+    background-color: #cee2f2;
+    width: 54px;
+    position: relative;
+    height: 54px;
+    border-radius: 50%;
+}
+.circleimg{
+    width: 54px;
+    position: relative;
+    height: 54px;
+}
+.div-comments{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.div-comments img{
+    width: 200px;
+    height: auto;
+    margin-top: 2vh;
+    margin-left: 2vh;
+}
+.lh1{
+    line-height:3vh !important;
+}
+.bookbtn{
+    margin-bottom: 2vh;
+    width: 100%;
+    margin-top: 4vh;
+}
+.comentarios{height: 200px !important;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.priceApp{
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.divContentDetails{
+    width: 100%;
+    height: auto;
+    background: #f2f2f2;
+    margin-bottom: 5vh;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border-radius: 5px;
+}
+.rowContent1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:40vh;
+}
+.div-circleTypeservice img{
+    width:170px;
+    border:none;
+    margin: 2px;
+    height:170px;
+    border: 4px solid #fff;
+    background-color: #e6ecf0;
+}
+.mediafix1{
+    width: 100%;
+    height: 40vh !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 @media (max-width:1200px) {
     .a-logo-maxwidth,.call-center,.div-content-slider,.div-contenedorSession,.divContentLogo,
     .divContentItems div:nth-child(4),.div-slider{display: none;}

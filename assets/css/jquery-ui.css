@@ -6,7 +6,7 @@
 
 /* Layout helpers
 ----------------------------------*/
-.ui-helper-hidden {
+/* .ui-helper-hidden {
 	display: none;
 }
 .ui-helper-hidden-accessible {
@@ -39,8 +39,9 @@
 	clear: both;
 }
 .ui-helper-clearfix {
-	min-height: 0; /* support: IE7 */
-}
+	min-height: 0; */
+	 /* support: IE7 */
+/* }
 .ui-helper-zfix {
 	width: 100%;
 	height: 100%;
@@ -53,21 +54,21 @@
 
 .ui-front {
 	z-index: 100;
-}
+} */
 
 
 /* Interaction Cues
 ----------------------------------*/
-.ui-state-disabled {
+/* .ui-state-disabled {
 	cursor: default !important;
-}
+} */
 
 
 /* Icons
 ----------------------------------*/
 
 /* states and images */
-.ui-icon {
+/* .ui-icon {
 	display: block;
 	text-indent: -99999px;
 	overflow: hidden;
@@ -79,7 +80,7 @@
 ----------------------------------*/
 
 /* Overlays */
-.ui-widget-overlay {
+/* .ui-widget-overlay {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -92,9 +93,10 @@
 	position: relative;
 	margin-top: 2px;
 	padding: .5em .5em .5em .7em;
-	min-height: 0; /* support: IE7 */
-}
-.ui-accordion .ui-accordion-icons {
+	min-height: 0;  */
+	/* support: IE7 */
+/* } */
+/* .ui-accordion .ui-accordion-icons {
 	padding-left: 2.2em;
 }
 .ui-accordion .ui-accordion-noicons {
@@ -129,21 +131,22 @@
 	cursor: pointer;
 	vertical-align: middle;
 	text-align: center;
-	overflow: visible; /* removes extra width in IE */
-}
-.ui-button,
+	overflow: visible;  */
+	/* removes extra width in IE */
+/* }  */
+/* .ui-button,
 .ui-button:link,
 .ui-button:visited,
 .ui-button:hover,
 .ui-button:active {
 	text-decoration: none;
-}
+} */
 /* to make room for the icon, a width needs to be set here */
-.ui-button-icon-only {
+/* .ui-button-icon-only {
 	width: 2.2em;
-}
+} */
 /* button elements seem to need a little more width */
-button.ui-button-icon-only {
+/* button.ui-button-icon-only {
 	width: 2.4em;
 }
 .ui-button-icons-only {
@@ -151,10 +154,10 @@ button.ui-button-icon-only {
 }
 button.ui-button-icons-only {
 	width: 3.7em;
-}
+} */
 
 /* button text element */
-.ui-button .ui-button-text {
+/* .ui-button .ui-button-text {
 	display: block;
 	line-height: normal;
 }
@@ -177,14 +180,14 @@ button.ui-button-icons-only {
 .ui-button-text-icons .ui-button-text {
 	padding-left: 2.1em;
 	padding-right: 2.1em;
-}
+} */
 /* no icon support for input elements, provide padding by default */
-input.ui-button {
+/* input.ui-button {
 	padding: .4em 1em;
-}
+} */
 
 /* button icon element(s) */
-.ui-button-icon-only .ui-icon,
+/* .ui-button-icon-only .ui-icon,
 .ui-button-text-icon-primary .ui-icon,
 .ui-button-text-icon-secondary .ui-icon,
 .ui-button-text-icons .ui-icon,
@@ -209,17 +212,17 @@ input.ui-button {
 }
 
 /* button sets */
-.ui-buttonset {
+/* .ui-buttonset {
 	margin-right: 7px;
 }
 .ui-buttonset .ui-button {
 	margin-left: 0;
 	margin-right: -.3em;
-}
+}  */
 
 /* workarounds */
 /* reset extra padding in Firefox, see h5bp.com/l */
-input.ui-button::-moz-focus-inner,
+/* input.ui-button::-moz-focus-inner,
 button.ui-button::-moz-focus-inner {
 	border: 0;
 	padding: 0;
@@ -227,7 +230,6 @@ button.ui-button::-moz-focus-inner {
 .ui-datepicker {
 	width: 17em;
 	padding: .2em .2em 0;
-	display: none;
 }
 .ui-datepicker .ui-datepicker-header {
 	position: relative;
@@ -322,10 +324,10 @@ button.ui-button::-moz-focus-inner {
 }
 .ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
 	float: left;
-}
+} */
 
 /* with multiple calendars */
-.ui-datepicker.ui-datepicker-multi {
+/* .ui-datepicker.ui-datepicker-multi {
 	width: auto;
 }
 .ui-datepicker-multi .ui-datepicker-group {
@@ -355,10 +357,10 @@ button.ui-button::-moz-focus-inner {
 	clear: both;
 	width: 100%;
 	font-size: 0;
-}
+} */
 
 /* RTL support */
-.ui-datepicker-rtl {
+/* .ui-datepicker-rtl {
 	direction: rtl;
 }
 .ui-datepicker-rtl .ui-datepicker-prev {
@@ -467,9 +469,9 @@ button.ui-button::-moz-focus-inner {
 	padding: 0;
 	width: 100%;
 	/* support: IE10, see #8844 */
-	list-style-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
-}
-.ui-menu .ui-menu-divider {
+	/* list-style-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
+} */
+/* .ui-menu .ui-menu-divider {
 	margin: 5px -2px 5px -2px;
 	height: 0;
 	font-size: 0;
@@ -482,7 +484,7 @@ button.ui-button::-moz-focus-inner {
 	padding: 2px .4em;
 	line-height: 1.5;
 	min-height: 0; /* support: IE7 */
-	font-weight: normal;
+	/* font-weight: normal;
 }
 .ui-menu .ui-menu-item a.ui-state-focus,
 .ui-menu .ui-menu-item a.ui-state-active {
@@ -497,26 +499,26 @@ button.ui-button::-moz-focus-inner {
 }
 .ui-menu .ui-state-disabled a {
 	cursor: default;
-}
+}   */
 
 /* icon support */
-.ui-menu-icons {
+/* .ui-menu-icons {
 	position: relative;
 }
 .ui-menu-icons .ui-menu-item a {
 	position: relative;
 	padding-left: 2em;
-}
+} */
 
 /* left-aligned */
-.ui-menu .ui-icon {
+/* .ui-menu .ui-icon {
 	position: absolute;
 	top: .2em;
 	left: .2em;
-}
+} */
 
 /* right-aligned */
-.ui-menu .ui-menu-icon {
+/* .ui-menu .ui-menu-icon {
 	position: static;
 	float: right;
 }
@@ -629,10 +631,10 @@ button.ui-button::-moz-focus-inner {
 	display: block;
 	border: 0;
 	background-position: 0 0;
-}
+} */
 
 /* For IE8 - See #6727 */
-.ui-slider.ui-state-disabled .ui-slider-handle,
+/* .ui-slider.ui-state-disabled .ui-slider-handle,
 .ui-slider.ui-state-disabled .ui-slider-range {
 	filter: inherit;
 }
@@ -703,15 +705,15 @@ button.ui-button::-moz-focus-inner {
 	display: block;
 	overflow: hidden;
 	right: 0;
-}
+} */
 /* more specificity required here to overide default borders */
-.ui-spinner a.ui-spinner-button {
+/* .ui-spinner a.ui-spinner-button {
 	border-top: none;
 	border-bottom: none;
 	border-right: none;
 }
 /* vertical centre icon */
-.ui-spinner .ui-icon {
+/* .ui-spinner .ui-icon {
 	position: absolute;
 	margin-top: -8px;
 	top: 50%;
@@ -722,17 +724,18 @@ button.ui-button::-moz-focus-inner {
 }
 .ui-spinner-down {
 	bottom: 0;
-}
+} */
 
 /* TR overrides */
-.ui-spinner .ui-icon-triangle-1-s {
+/* .ui-spinner .ui-icon-triangle-1-s { */
 	/* need to fix icons sprite */
-	background-position: -65px -16px;
+	/* background-position: -65px -16px;
 }
 .ui-tabs {
-	position: relative;/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
-	padding: .2em;
-}
+	position: relative; */
+	/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+	/* padding: .2em; */
+/* }
 .ui-tabs .ui-tabs-nav {
 	margin: 0;
 	padding: .2em .2em 0;
@@ -760,9 +763,10 @@ button.ui-button::-moz-focus-inner {
 .ui-tabs .ui-tabs-nav li.ui-state-disabled a,
 .ui-tabs .ui-tabs-nav li.ui-tabs-loading a {
 	cursor: text;
-}
-.ui-tabs .ui-tabs-nav li a, /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
-.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active a {
+}  */
+/* .ui-tabs .ui-tabs-nav li a, */
+ /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
+/* .ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active a {
 	cursor: pointer;
 }
 .ui-tabs .ui-tabs-panel {
@@ -781,11 +785,11 @@ button.ui-button::-moz-focus-inner {
 }
 body .ui-tooltip {
 	border-width: 2px;
-}
+} */
 
 /* Component containers
 ----------------------------------*/
-.ui-widget {
+/* .ui-widget {
 	font-family: Verdana,Arial,sans-serif;
 	font-size: 0.8em;
 }
@@ -816,11 +820,11 @@ body .ui-tooltip {
 }
 .ui-widget-header a {
 	color: #222222;
-}
+} */
 
 /* Interaction states
 ----------------------------------*/
-.ui-state-default,
+/* .ui-state-default,
 .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default {
 	border: 0px solid #d3d3d3;
@@ -853,8 +857,8 @@ body .ui-tooltip {
 .ui-state-hover a:visited {
 	color: #212121;
 	text-decoration: none;
-}
-.ui-state-active,
+} */
+/* .ui-state-active,
 .ui-widget-content .ui-state-active,
 .ui-widget-header .ui-state-active {
 	border: 0px solid #aaaaaa;
@@ -867,11 +871,11 @@ body .ui-tooltip {
 .ui-state-active a:visited {
 	color: #212121;
 	text-decoration: none;
-}
+} */
 
 /* Interaction Cues
 ----------------------------------*/
-.ui-state-highlight,
+/* .ui-state-highlight,
 .ui-widget-content .ui-state-highlight,
 .ui-widget-header .ui-state-highlight {
 	border: 1px solid #6699cc;
@@ -921,13 +925,13 @@ body .ui-tooltip {
 }
 .ui-state-disabled .ui-icon {
 	filter:Alpha(Opacity=35); /* For IE8 - See #6059 */
-}
+/* } */
 
 /* Icons
 ----------------------------------*/
 
 /* states and images */
-.ui-icon {
+/* .ui-icon {
 	width: 16px;
 	height: 16px;
 }
@@ -954,10 +958,10 @@ body .ui-tooltip {
 .ui-state-error .ui-icon,
 .ui-state-error-text .ui-icon {
 	background-image: url(../../images/ui-icons_cd0a0a_256x240.png);
-}
+} */
 
 /* positioning */
-.ui-icon-blank { background-position: 16px 16px; }
+/* .ui-icon-blank { background-position: 16px 16px; }
 .ui-icon-carat-1-n { background-position: 0 0; }
 .ui-icon-carat-1-ne { background-position: -16px 0; }
 .ui-icon-carat-1-e { background-position: -32px 0; }
@@ -1095,7 +1099,7 @@ body .ui-tooltip {
 .ui-icon-seek-end { background-position: -64px -160px; }
 .ui-icon-seek-start { background-position: -80px -160px; }
 /* ui-icon-seek-first is deprecated, use ui-icon-seek-start instead */
-.ui-icon-seek-first { background-position: -80px -160px; }
+/* .ui-icon-seek-first { background-position: -80px -160px; }
 .ui-icon-stop { background-position: -96px -160px; }
 .ui-icon-eject { background-position: -112px -160px; }
 .ui-icon-volume-off { background-position: -128px -160px; }
@@ -1132,14 +1136,14 @@ body .ui-tooltip {
 .ui-icon-grip-solid-vertical { background-position: -32px -224px; }
 .ui-icon-grip-solid-horizontal { background-position: -48px -224px; }
 .ui-icon-gripsmall-diagonal-se { background-position: -64px -224px; }
-.ui-icon-grip-diagonal-se { background-position: -80px -224px; }
+.ui-icon-grip-diagonal-se { background-position: -80px -224px; }  */
 
 
 /* Misc visuals
 ----------------------------------*/
 
 /* Corner radius */
-.ui-corner-all,
+/* .ui-corner-all,
 .ui-corner-top,
 .ui-corner-left,
 .ui-corner-tl {
@@ -1162,10 +1166,10 @@ body .ui-tooltip {
 .ui-corner-right,
 .ui-corner-br {
 	border-bottom-right-radius: 1px;
-}
+} */
 
 /* Overlays */
-.ui-widget-overlay {
+/* .ui-widget-overlay {
 	background: #aaaaaa url(../../images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x;
 	opacity: .3;
 	filter: Alpha(Opacity=30);
@@ -1177,4 +1181,4 @@ body .ui-tooltip {
 	opacity: .3;
 	filter: Alpha(Opacity=30);
 	border-radius: 8px;
-}
+} */

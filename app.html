@@ -1,396 +1,442 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>App reserveahora</title>
-	
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>App reserveahora</title>
+
     <!-- Bootstrap -->
     <link href="dist/css/bootstrap.css" rel="stylesheet" media="screen">
     <link href="assets/css/custom.css" rel="stylesheet" media="screen">
 
     <!-- Carousel -->
-	<link href="examples/carousel/carousel.css" rel="stylesheet">
+    <link href="examples/carousel/carousel.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="assets/js/html5shiv.js"></script>
       <script src="assets/js/respond.min.js"></script>
     <![endif]-->
-    <!-- Fonts -->	
-	<link href='http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Baloo|Open+Sans|Roboto" rel="stylesheet">
-	<!-- Font-Awesome -->
+    <!-- Font-Awesome -->
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css" media="screen" />
     <!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="assets/css/font-awesome-ie7.css" media="screen" /><![endif]-->
-	
+
     <!-- REVOLUTION BANNER CSS SETTINGS -->
     <link rel="stylesheet" type="text/css" href="css/fullscreen.css" media="screen" />
-	<link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
-	<link rel="stylesheet" href="assets/css/app.css">
-    <!-- Picker UI-->	
-	<link rel="stylesheet" href="assets/css/jquery-ui.css" />		
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
-		
-  </head>
-  <body id="top">
+    <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
+    <link rel="stylesheet" href="assets/css/app.css">
+    <!-- Picker UI-->
+    <link rel="stylesheet" href="assets/css/jquery-ui.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/git/jquery.mobile-git.css" />
+    <link rel="stylesheet" href="assets/css/jquery.mobile.datepicker.css" />
+    <link rel="stylesheet" href="assets/css/jquery.mobile.datepicker.theme.css" />
+</head>
+
+<body id="top">
     <!-- header app -->
-	<div class="header-app">
-		<div class="father-logo">
-			<a href="" class="a-logo-maxwidth"><img src="images/reservelogo.png" alt=""></a>
-			<a href="#" class="a-logo-reserveahora"><img src="images/Reserve-Ahora.png" alt=""></a>
-		</div>
-		<div class="div-father-items">
-			<div class="dropdown">
-				<button class="dropbtn">COP</button>
-				<div class="dropdown-content">
-					<a href="#">€ euro</a>
-					<a href="#">mxn</a>
-					<a href="#">£ libra</a>
-				</div>
-			</div>
-			<div class="dropdown">
-				<button class="dropbtn">
+    <div class="header-app">
+        <div class="father-logo">
+            <a href="" class="a-logo-maxwidth"><img src="images/reservelogo.png" alt=""></a>
+            <a href="#" class="a-logo-reserveahora"><img src="images/Reserve-Ahora.png" alt=""></a>
+        </div>
+        <div class="div-father-items">
+            <div class="dropdown">
+                <button class="dropbtn">COP</button>
+                <div class="dropdown-content">
+                    <a href="#">€ euro</a>
+                    <a href="#">mxn</a>
+                    <a href="#">£ libra</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">
 					<a href="#"><div class="div-countryImg"></div></a>
 				</button>
-				<div class="dropdown-content">
-					<a href="#"><div class="div-countryImgUsa"></div></a>
-					<a href="#"><div class="div-countryAle"></div></a>
-					<a href="#"><div class="div-countryImgPor"></div></a>
-				</div>
-			</div>
-			<div class="dropdown">
-				<button class="dropbtn">
+                <div class="dropdown-content">
+                    <a href="#">
+                        <div class="div-countryImgUsa"></div>
+                    </a>
+                    <a href="#">
+                        <div class="div-countryAle"></div>
+                    </a>
+                    <a href="#">
+                        <div class="div-countryImgPor"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">
 					<a href="#"><a href="#" class="a-user"><i class="fas fa-user"></i></a></a>
 				</button>
-				<div class="dropdown-content">
-					<a href="#">Ingresar</a>
-					<a href="#">Regitrar</a>
-				</div>
-			</div>
-			<h4 class="h4-login">Tu cuenta</h4>
-		</div>
-	</div>
-	<!-- end header app -->
-	<!-- bannerApp -->
-	<div class="container-appBga">
-		<div class="div-calendar">
-			<form action="" class="form-app" method="POST"  autocomplete="on">
-				<h3 class="h3-info">Encuentra ofertas para todas las temporadas</h3>
-				<p class="p-info">Desde casas acogedoras hasta modernos apartamentos</p>
-				<div class="div-father-input-from">
-					<select class="input-date" name="itemName"  id="city-app" 
-					></select>
-				</div>
-				<div class="div-father-dates">
-					<input type="date" id="checkin-app" class="input-date calendar Datepicker" placeholder="Check In">
-					<input type="date" id="checkout-app" class="input-date calendar Datepicker" placeholder="Check Out" >
-				</div>
-				<div class="div-father-dates">
-					<input type="number" id="rooms-app" class="input-adults" placeholder="Habitaciones" >
-					<input type="number" id="adults-app" class="input-adults" placeholder="Adultos">
-					<input type="number" id="childrens-app"  class="input-childrens" placeholder="Niños">
-				</div>
-				<a href="views/list.html" id="sendData"  class="button-send" >Enviar</a>
-				<div><img src="images/call.png" alt="" class="call-center"></div>
-			</form>
-			<div class="div-sessionImage">
-				<div class="div-content-slider">
-					<iframe width="280" height="280" src="https://www.youtube.com/embed/7hG1GkrJGqw?list=PLoR8Vv9f-WDJ2zpIpEUdCCuXY8uDraWrr" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-				</div>
-				<div class="div-contenedorSession">
-					<img src="images/Reserve-Ahora.png" alt="">
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- endBannerApp -->
-	<!-- container code -->
-	<div class="div-content2">
-		<div class="div-slider">
-			<img src="images/American-Express.png" alt="">
-			<img src="images/Ath.png" alt="">
-			<img src="images/Baloto.png" alt="">
-			<img src="images/Corulla.png" alt="">
-			<img src="images/Diner.png" alt="">
-			<img src="images/Master-Card.png" alt="">
-			<img src="images/PSE.png" alt="">
-			<img src="images/Tarjeta-Exito.png" alt="">
-			<img src="images/¨Paypal.png" alt="">
-			<img src="images/Exito.png" alt="">
-			<img src="images/Surtimax.png" alt="">
-			<img src="images/Visa.png" alt="">
-		</div>
-		<div  class="div-textTravel">
-			<h2>Aquí comienza tu viaje</h2>
-		</div>
-		<div class="div-galleryHotels">
-			<div class="divCardApp">
-				<div class="div-header">
-					<div class="div-subhedertext">
-						<i class="fas fa-map-marker-alt"></i>
-						<h3>Hotel en bogota</h3>
-					</div>
-				</div>
-				<div class="div-footer">
-					<p>$1000</p>
-				</div>
-			</div>
-			<div class="divCardApp">
-				<div class="div-header2">
-					<div class="div-subhedertext">
-						<i class="fas fa-map-marker-alt"></i>
-						<h3>Hotel en bogota</h3>
-					</div>
-				</div>
-				<div class="div-footer">
-					<p>$1000</p>
-				</div>
-			</div>
-			<div class="divCardApp">
-				<div class="div-header3">
-					<div class="div-subhedertext">
-						<i class="fas fa-map-marker-alt"></i>
-						<h3>Hotel en bogota</h3>
-					</div>
-				</div>
-				<div class="div-footer">
-					<p>$1000</p>
-				</div>
-			</div>
-			<div class="divCardApp">
-				<div class="div-header">
-					<div class="div-subhedertext">
-						<i class="fas fa-map-marker-alt"></i>
-						<h3>Hotel en bogota</h3>
-					</div>
-				</div>
-				<div class="div-footer">
-					<p>$1000</p>
-				</div>
-			</div>						
-		</div>
-				<div class="div-galleryHotels">
-			<div class="divCardApp">
-				<div class="div-header">
-					<div class="div-subhedertext">
-						<i class="fas fa-map-marker-alt"></i>
-						<h3>Hotel en bogota</h3>
-					</div>
-				</div>
-				<div class="div-footer">
-					<p>$1000</p>
-				</div>
-			</div>
-			<div class="divCardApp">
-				<div class="div-header">
-					<div class="div-subhedertext">
-						<i class="fas fa-map-marker-alt"></i>
-						<h3>Hotel en bogota</h3>
-					</div>
-				</div>
-				<div class="div-footer">
-					<p>$1000</p>
-				</div>
-			</div>
-			<div class="divCardApp">
-				<div class="div-header">
-					<div class="div-subhedertext">
-						<i class="fas fa-map-marker-alt"></i>
-						<h3>Hotel en bogota</h3>
-					</div>
-				</div>
-				<div class="div-footer">
-					<p>$1000</p>
-				</div>
-			</div>
-			<div class="divCardApp">
-				<div class="div-header">
-					<div class="div-subhedertext">
-						<i class="fas fa-map-marker-alt"></i>
-						<h3>Hotel en bogota</h3>
-					</div>
-				</div>
-				<div class="div-footer">
-					<p>$1000</p>
-				</div>
-			</div>						
-		</div>
-	</div>
-	<!-- end container code -->
-	<!-- read app component -->
-	<div class="div-contentNewsLetter">
-		<h1>Ofertas exclusivas en tu email</h1>
-		<div class="div-formContent">
-			<form action="">
-				<input type="text" placeholder="Tu correo">
-				<button>Quiero recibirlas</button>
-			</form>
-		</div>
-	</div>
-	<!-- end read component -->
-	<!-- component chips -->
-	<div class="div-content-filters">
-		<div class="div-headerfilters "></div>
-		<div class="div-chips ">
-			<div class="div-column1chip ">
-					<a href="#" class="">Hoteles en Bogotá</a>
-					<a href="#" class="">Hoteles en Medellin</a>
-					<a href="#" class="">Hoteles en Cali</a>
-					<a href="#" class="">Hoteles en San Andres</a>
-					<a href="#" class="">Hoteles en Cartagena</a>
-					<a href="#" class="">Hoteles en Santa marta</a>
-				</div>
-				<div class="div-column1chip ">
-					<a href="#" class="">Hoteles en Bogotá</a>
-					<a href="#" class="">Hoteles en Medellin</a>
-					<a href="#" class="">Hoteles en Cali</a>
-					<a href="#" class="">Hoteles en San Andres</a>
-					<a href="#" class="">Hoteles en Cartagena</a>
-					<a href="#" class="">Hoteles en Santa marta</a>
-				</div>
-				<div class="div-column1chip ">
-					<a href="#" class="">Hoteles en Bogotá con desayuno</a>
-					<a href="#" class="">Hoteles en Medellin con desayuno</a>
-					<a href="#" class="">Hoteles en Medellin con desayuno</a>
-					<a href="#" class="">Hoteles en Cali</a>
-				</div>
-				<div class="div-column1chip ">
-					<a href="#" class="">Hoteles en Bogotá con desayuno</a>
-					<a href="#" class="">Hoteles en Medellin con desayuno</a>
-					<a href="#" class="">Hoteles en Medellin con desayuno</a>
-					<a href="#" class="">Hoteles en Cali</a>
-				</div>
-				<div class="div-column1chip ">
-					<a href="#" class="">Hoteles en Bogotá con desayuno</a>
-					<a href="#" class="">Hoteles en Medellin con desayuno</a>
-					<a href="#" class="">Hoteles en Medellin con desayuno</a>
-					<a href="#" class="">Hoteles en Cali</a>
-				</div>
-		</div>
-		<div class="div-footerfilters"></div>
-	</div>
-	<!-- end component chips -->
-	<!-- footer -->
-	<div class="div-footerApp">
-		<div class="divContentLogo">
-			<img src="images/reserve.png" alt="">
-		</div>
-		<div class="divContentItems">
-			<div>
-				<a href="#">Hola</a>
-				<a href="#">Hola</a>
-				<a href="#">Hola</a>
-				<a href="#">Hola</a>
-			</div>
-			<div>
-				<a href="#">Hola</a>
-				<a href="#">Hola</a>
-				<a href="#">Hola</a>
-				<a href="#">Hola</a>
-			</div>
-			<div>
-				<a href="#">Hola</a>
-				<a href="#">Hola</a>
-				<a href="#">Hola</a>
-				<a href="#">Hola</a>                    
-			</div>
-			<div>
-			</div>                
-		</div>
-	</div>
-	<div class="div-social">
-		<div class="div-subSocial">
-			<a href="#" class="social1b"><img src="images/icon-facebook.png" alt=""/></a>
-			<a href="#" class="social2b"><img src="images/icon-twitter.png" alt=""/></a>
-			<a href="#" class="social3b"><img src="images/icon-gplus.png" alt=""/></a>
-			<a href="#" class="social4b"><img src="images/icon-youtube.png" alt=""/></a>
-		</div>
-	</div>
-	<!-- end foooter -->
-	<!-- menumobile -->
-	<div class="div-menu-mobile">
-		<div class="div-item-mobile">
-			<a href="#"><i class="fas fa-home fa"></i></a>
-			<label for="">hoteles</label>
-		</div>
-		<div class="div-item-mobile">
-			<a href="#"><i class="fas fa-home fa"></i></a>
-			<label for="">hoteles</label>
-		</div>
-		<div class="div-item-mobile">
-			<a href="#"><i class="fas fa-home fa"></i></a>
-			<label for="">hoteles</label>
-		</div>
-	</div>
-	<!-- jQuery -->
-	<script src="assets/js/jquery-1.9.1.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
-	<!-- endmenumobile -->
-	<script type="text/javascript">
-	    $('#sendData').click(function(e){
-            e.preventDefault();
-            setTimeout(function(){
-                window.location.href = "views/list.html"    
-                console.log("listo");
-            },6000);
-		});
-	$('#city-app').select2({ 
-      placeholder: 'Selecciona ciudad',
-      ajax: {
-        url: 'https://d93f77e8.ngrok.io/api/v1/cities',
-        dataType: 'json',
-        delay: 250,
-        processResults: function (data) {
-          return {
-            results:  $.map(data, function (item) {
-				return {
-					//   local:localStorage.setItem("idcityApp",(item.id)),
-                      text: item.city,
-                      id: item.id
-                  }
-              })
-          };
-        },
-        cache: true
-      }
-	});
-	</script>
-	<script defer src="https://use.fontawesome.com/releases/v5.0.12/js/all.js" integrity="sha384-Voup2lBiiyZYkRto2XWqbzxHXwzcm4A5RfdfG6466bu5LqjwwrjXCMBQBLMWh7qR" crossorigin="anonymous"></script>
-	<!-- Javascript -->
-	<script src="assets/js/app.js"></script>
+                <div class="dropdown-content">
+                    <a href="#">Ingresar</a>
+                    <a href="#">Regitrar</a>
+                </div>
+            </div>
+            <h4 class="h4-login">Tu cuenta</h4>
+        </div>
+    </div>
+    <!-- end header app -->
+    <!-- bannerApp -->
+    <div class="container-appBga">
+        <div class="div-calendar">
+            <form action="" class="form-app" method="POST" autocomplete="on">
+                <h3 class="h3-info">Encuentra ofertas para todas las temporadas</h3>
+                <p class="p-info">Desde casas acogedoras hasta modernos apartamentos</p>
+                <div class="div-father-input-from">
+                    <select class="input-date" name="itemName" id="city-app"></select>
+                </div>
+                <div class="div-father-dates">
+                    <input type="text" id="checkin-app" class="input-date calendar Datepicker" placeholder="Check In" data-role="date">
+                    <input type="text" id="checkout-app" class="input-date calendar Datepicker" placeholder="Check Out" data-role="date">
+                </div>
+                <div class="div-father-dates">
+                    <input type="number" id="rooms-app" class="input-adults" placeholder="Habitaciones">
+                    <input type="number" id="adults-app" class="input-adults" placeholder="Adultos">
+                    <input type="number" id="childrens-app" class="input-childrens" placeholder="Niños">
+                </div>
+                <a href="views/list.html" id="sendData" class="button-send">Enviar</a>
+                <div><img src="images/call.png" alt="" class="call-center"></div>
+            </form>
+            <div class="div-sessionImage">
+                <div class="div-content-slider">
+                    <iframe width="280" height="280" src="https://www.youtube.com/embed/7hG1GkrJGqw?list=PLoR8Vv9f-WDJ2zpIpEUdCCuXY8uDraWrr" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <div class="div-contenedorSession">
+                    <img src="images/Reserve-Ahora.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- endBannerApp -->
+    <!-- container code -->
+    <div class="div-content2">
+        <div class="div-slider">
+            <img src="images/American-Express.png" alt="">
+            <img src="images/Ath.png" alt="">
+            <img src="images/Baloto.png" alt="">
+            <img src="images/Corulla.png" alt="">
+            <img src="images/Diner.png" alt="">
+            <img src="images/Master-Card.png" alt="">
+            <img src="images/PSE.png" alt="">
+            <img src="images/Tarjeta-Exito.png" alt="">
+            <img src="images/¨Paypal.png" alt="">
+            <img src="images/Exito.png" alt="">
+            <img src="images/Surtimax.png" alt="">
+            <img src="images/Visa.png" alt="">
+        </div>
+        <div class="div-textTravel">
+            <h2>Aquí comienza tu viaje</h2>
+        </div>
+        <div class="div-galleryHotels">
+            <div class="divCardApp">
+                <div class="div-header">
+                    <div class="div-subhedertext">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Hotel en bogota</h3>
+                    </div>
+                </div>
+                <div class="div-footer">
+                    <p>$1000</p>
+                </div>
+            </div>
+            <div class="divCardApp">
+                <div class="div-header2">
+                    <div class="div-subhedertext">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Hotel en bogota</h3>
+                    </div>
+                </div>
+                <div class="div-footer">
+                    <p>$1000</p>
+                </div>
+            </div>
+            <div class="divCardApp">
+                <div class="div-header3">
+                    <div class="div-subhedertext">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Hotel en bogota</h3>
+                    </div>
+                </div>
+                <div class="div-footer">
+                    <p>$1000</p>
+                </div>
+            </div>
+            <div class="divCardApp">
+                <div class="div-header">
+                    <div class="div-subhedertext">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Hotel en bogota</h3>
+                    </div>
+                </div>
+                <div class="div-footer">
+                    <p>$1000</p>
+                </div>
+            </div>
+        </div>
+        <div class="div-galleryHotels">
+            <div class="divCardApp">
+                <div class="div-header">
+                    <div class="div-subhedertext">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Hotel en bogota</h3>
+                    </div>
+                </div>
+                <div class="div-footer">
+                    <p>$1000</p>
+                </div>
+            </div>
+            <div class="divCardApp">
+                <div class="div-header">
+                    <div class="div-subhedertext">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Hotel en bogota</h3>
+                    </div>
+                </div>
+                <div class="div-footer">
+                    <p>$1000</p>
+                </div>
+            </div>
+            <div class="divCardApp">
+                <div class="div-header">
+                    <div class="div-subhedertext">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Hotel en bogota</h3>
+                    </div>
+                </div>
+                <div class="div-footer">
+                    <p>$1000</p>
+                </div>
+            </div>
+            <div class="divCardApp">
+                <div class="div-header">
+                    <div class="div-subhedertext">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Hotel en bogota</h3>
+                    </div>
+                </div>
+                <div class="div-footer">
+                    <p>$1000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end container code -->
+    <!-- read app component -->
+    <div class="div-contentNewsLetter">
+        <h1>Ofertas exclusivas en tu email</h1>
+        <div class="div-formContent">
+            <form action="">
+                <input type="text" placeholder="Tu correo">
+                <button>Quiero recibirlas</button>
+            </form>
+        </div>
+    </div>
+    <!-- end read component -->
+    <!-- component chips -->
+    <div class="div-content-filters">
+        <div class="div-headerfilters "></div>
+        <div class="div-chips ">
+            <div class="div-column1chip ">
+                <a href="#" class="">Hoteles en Bogotá</a>
+                <a href="#" class="">Hoteles en Medellin</a>
+                <a href="#" class="">Hoteles en Cali</a>
+                <a href="#" class="">Hoteles en San Andres</a>
+                <a href="#" class="">Hoteles en Cartagena</a>
+                <a href="#" class="">Hoteles en Santa marta</a>
+            </div>
+            <div class="div-column1chip ">
+                <a href="#" class="">Hoteles en Bogotá</a>
+                <a href="#" class="">Hoteles en Medellin</a>
+                <a href="#" class="">Hoteles en Cali</a>
+                <a href="#" class="">Hoteles en San Andres</a>
+                <a href="#" class="">Hoteles en Cartagena</a>
+                <a href="#" class="">Hoteles en Santa marta</a>
+            </div>
+            <div class="div-column1chip ">
+                <a href="#" class="">Hoteles en Bogotá con desayuno</a>
+                <a href="#" class="">Hoteles en Medellin con desayuno</a>
+                <a href="#" class="">Hoteles en Medellin con desayuno</a>
+                <a href="#" class="">Hoteles en Cali</a>
+            </div>
+            <div class="div-column1chip ">
+                <a href="#" class="">Hoteles en Bogotá con desayuno</a>
+                <a href="#" class="">Hoteles en Medellin con desayuno</a>
+                <a href="#" class="">Hoteles en Medellin con desayuno</a>
+                <a href="#" class="">Hoteles en Cali</a>
+            </div>
+            <div class="div-column1chip ">
+                <a href="#" class="">Hoteles en Bogotá con desayuno</a>
+                <a href="#" class="">Hoteles en Medellin con desayuno</a>
+                <a href="#" class="">Hoteles en Medellin con desayuno</a>
+                <a href="#" class="">Hoteles en Cali</a>
+            </div>
+        </div>
+        <div class="div-footerfilters"></div>
+    </div>
+    <!-- end component chips -->
+    <!-- footer -->
+    <div class="div-footerApp">
+        <div class="divContentLogo">
+            <img src="images/reserve.png" alt="">
+        </div>
+        <div class="divContentItems">
+            <div>
+                <a href="#">Hola</a>
+                <a href="#">Hola</a>
+                <a href="#">Hola</a>
+                <a href="#">Hola</a>
+            </div>
+            <div>
+                <a href="#">Hola</a>
+                <a href="#">Hola</a>
+                <a href="#">Hola</a>
+                <a href="#">Hola</a>
+            </div>
+            <div>
+                <a href="#">Hola</a>
+                <a href="#">Hola</a>
+                <a href="#">Hola</a>
+                <a href="#">Hola</a>
+            </div>
+            <div>
+            </div>
+        </div>
+    </div>
+    <div class="div-social">
+        <div class="div-subSocial">
+            <a href="#" class="social1b"><img src="images/icon-facebook.png" alt=""/></a>
+            <a href="#" class="social2b"><img src="images/icon-twitter.png" alt=""/></a>
+            <a href="#" class="social3b"><img src="images/icon-gplus.png" alt=""/></a>
+            <a href="#" class="social4b"><img src="images/icon-youtube.png" alt=""/></a>
+        </div>
+    </div>
+    <!-- end foooter -->
+    <!-- menumobile -->
+    <div class="div-menu-mobile">
+        <div class="div-item-mobile">
+            <a href="#"><i class="fas fa-home fa"></i></a>
+            <label for="">hoteles</label>
+        </div>
+        <div class="div-item-mobile">
+            <a href="#"><i class="fas fa-home fa"></i></a>
+            <label for="">hoteles</label>
+        </div>
+        <div class="div-item-mobile">
+            <a href="#"><i class="fas fa-home fa"></i></a>
+            <label for="">hoteles</label>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="assets/js/jquery-1.9.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <!-- endmenumobile -->
+    <script type="text/javascript">
+        $('#city-app').select2({
+        		    placeholder: 'Selecciona ciudad',
+        		    ajax: {
+        		        url: 'https://7e419525.ngrok.io/api/v1/cities',
+        		        dataType: 'json',
+        		        delay: 250,
+        		        processResults: function(data) {
+        		            return {
+        		                results: $.map(data, function(item) {
+        		                    return {
+        		                        //   local:localStorage.setItem("idcityApp",(item.id)),
+        		                        text: item.city,
+        		                        id: item.id
+        		                    }
+        		                })
+        		            };
+        		        },
+        		        cache: true
+        		    }
+        		});
+        		$('#sendData').click(function(e) {
+        		    e.preventDefault();
+        		    setTimeout(function() {
+        		        window.location.href = "views/list.html"
+        		        console.log("listo");
+        		    }, 6000);
+        		});
+        		$(function() {
+        		    $("#checkin-app").datepicker({
+        		        defaultDate: "+0",
+        		        dateFormat: "yy-mm-dd",
+        		        minDate: "+0",
+        		        onSelect: function(dateText, inst) {
+        		            var d = $.datepicker.parseDate(inst.settings.dateFormat, dateText);
+        		            d.setDate(d.getDate() + 1);
+        		            $("#checkout-app").val($.datepicker.formatDate(inst.settings.dateFormat, d));
+        		        },
+        
+        		        onClose: function(selectedDate) {
+        		            $("#checkout-app").datepicker("option", "minDate", selectedDate);
+        		        }
+        		    });
+        		});
+        		$(function() {
+        		    $("#checkout-app").datepicker({
+        		        defaultDate: "+0",
+        		        dateFormat: "yy-mm-dd",
+        		        minDate: "+0",
+        		        onSelect: function(dateText, inst) {
+        		            var d = $.datepicker.parseDate(inst.settings.dateFormat, dateText);
+        		            d.setDate(d.getDate() + 1);
+        		            $("#checkout-app").val($.datepicker.formatDate(inst.settings.dateFormat, d));
+        		        },
+        
+        		        onClose: function(selectedDate) {
+        		            $("#checkout-app").datepicker("option", "minDate", selectedDate);
+        		        }
+        		    });
+        		});
+    </script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.12/js/all.js" integrity="sha384-Voup2lBiiyZYkRto2XWqbzxHXwzcm4A5RfdfG6466bu5LqjwwrjXCMBQBLMWh7qR" crossorigin="anonymous"></script>
+    <!-- Javascript -->
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="assets/js/jquery.mobile.datepicker.js"></script>
+    <script src="assets/js/external/jquery-ui/datepicker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+    <script src="assets/js/app.js"></script>
     <!-- This page JS -->
-	<script src="assets/js/js-index3.js"></script>	
-	
+    <script src="assets/js/js-index3.js"></script>
+
     <!-- Custom functions -->
     <script src="assets/js/functions.js"></script>
-	
-    <!-- Picker UI-->	
-	<script src="assets/js/jquery-ui.js"></script>		
-	
-	<!-- Easing -->
+
+    <!-- Picker UI-->
+    <script src="assets/js/jquery-ui.js"></script>
+
+    <!-- Easing -->
     <script src="assets/js/jquery.easing.js"></script>
-	
+
     <!-- jQuery KenBurn Slider  -->
     <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-	
-   <!-- Nicescroll  -->	
-	<script src="assets/js/jquery.nicescroll.min.js"></script>
-	
+
+    <!-- Nicescroll  -->
+    <script src="assets/js/jquery.nicescroll.min.js"></script>
+
     <!-- CarouFredSel -->
     <script src="assets/js/jquery.carouFredSel-6.2.1-packed.js"></script>
     <script src="assets/js/helper-plugins/jquery.touchSwipe.min.js"></script>
-	<script type="text/javascript" src="assets/js/helper-plugins/jquery.mousewheel.min.js"></script>
-	<script type="text/javascript" src="assets/js/helper-plugins/jquery.transit.min.js"></script>
-	<script type="text/javascript" src="assets/js/helper-plugins/jquery.ba-throttle-debounce.min.js"></script>
-	
+    <script type="text/javascript" src="assets/js/helper-plugins/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="assets/js/helper-plugins/jquery.transit.min.js"></script>
+    <script type="text/javascript" src="assets/js/helper-plugins/jquery.ba-throttle-debounce.min.js"></script>
+
     <!-- Custom Select -->
-	<script type='text/javascript' src='assets/js/jquery.customSelect.js'></script>	
+    <script type='text/javascript' src='assets/js/jquery.customSelect.js'></script>
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="dist/js/bootstrap.min.js"></script>
-  </body>
+</body>
+
 </html>
