@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html>
   <head>
-  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>App reserveahora</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>App reserveahora</title>
 	
-    <!-- Bootstrap -->
-    <link href="../dist/css/bootstrap.css" rel="stylesheet" media="screen">
-    <link href="../assets/css/custom.css" rel="stylesheet" media="screen">
-
-    <!-- Carousel -->
-	<link href="../examples/carousel/carousel.css" rel="stylesheet">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="assets/js/html5shiv.js"></script>
-      <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
-    <!-- Fonts -->	
-	<link href='http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Baloo|Open+Sans|Roboto" rel="stylesheet">
-	<!-- Font-Awesome -->
-    <link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.css" media="screen" />
-    <!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="assets/css/font-awesome-ie7.css" media="screen" /><![endif]-->
+		<!-- Bootstrap -->
+		<link href="../dist/css/bootstrap.css" rel="stylesheet" media="screen">
+		<link href="../assets/css/custom.css" rel="stylesheet" media="screen">
 	
-    <!-- REVOLUTION BANNER CSS SETTINGS -->
-    <link rel="stylesheet" type="text/css" href="../css/fullscreen.css" media="screen" />
-	<link rel="stylesheet" type="text/css" href="../rs-plugin/css/settings.css" media="screen" />
-	<link rel="stylesheet" href="../assets/css/app.css">
-    <!-- Picker UI-->	
-	<link rel="stylesheet" href="../assets/css/jquery-ui.css" />		
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+		<!-- Carousel -->
+		<link href="../examples/carousel/carousel.css" rel="stylesheet">
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		  <script src="assets/js/html5shiv.js"></script>
+		  <script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+		<!-- Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+		<link href="https://fonts.googleapis.com/css?family=Baloo|Open+Sans|Roboto" rel="stylesheet">
+		<!-- Font-Awesome -->
+		<link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.css" media="screen" />
+		<!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="assets/css/font-awesome-ie7.css" media="screen" /><![endif]-->
+	
+		<!-- REVOLUTION BANNER CSS SETTINGS -->
+		<link rel="stylesheet" type="text/css" href="../css/fullscreen.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="../rs-plugin/css/settings.css" media="screen" />
+		<link rel="stylesheet" href="../assets/css/app.css">
+		<!-- Picker UI-->
+		<link rel="stylesheet" href="../assets/css/jquery-ui.css" />
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/git/jquery.mobile-git.css" />
+		<link rel="stylesheet" href="../assets/css/jquery.mobile.datepicker.css" />
+		<link rel="stylesheet" href="../assets/css/jquery.mobile.datepicker.theme.css" />
+	
 
 
 	
 	
   </head>
   <body>
-
+	<div class="loader-page"></div>
     <!-- header app -->
 	<div class="header-app">
 		<div class="father-logo">
@@ -78,22 +82,24 @@
 
 
     <div class="container breadcrub ">
-	    <div>
-			<a class="homebtn left" href="#"></a>
-			<div class="left">
-				<ul class="bcrumbs">
-					<li>/</li>
-					<li><a href="#">Hotels</a></li>
-					<li>/</li>
-					<li><a href="#">U.S.A.</a></li>
-					<li>/</li>					
-					<li><a href="#" class="active">New York</a></li>					
-				</ul>				
-			</div>
-			<a class="backbtn right" href="#"></a>
-		</div>
-		<div class="clearfix"></div>
-		<div class="brlines"></div>
+		<div class="div-calendar-details">
+            <form action="" class="form-appDetails" method="POST" autocomplete="on">
+				<div class="div-flexdetails">
+					<div class="div-father-input-fromDetail">
+						<select class="input-date" name="itemName" id="city-app"></select>
+					</div>
+					<div class="div-father-datesDetails">
+						<input type="text" id="checkin-app" class="input-date calendar Datepicker" placeholder="Check In" data-role="date">
+						<input type="text" id="checkout-app" class="input-date calendar Datepicker" placeholder="Check Out" data-role="date">
+						<input type="number" id="rooms-app" class="input-adults" placeholder="Habitaciones">
+						<input type="number" id="adults-app" class="input-adults" placeholder="Adultos">
+						<input type="number" id="childrens-app" class="input-childrens" placeholder="Niños">
+						<a href="views/list.html" id="sendData" class="button-sendDetail">Enviar</a>
+					</div>
+				</div>
+                <div><img src="images/call.png" alt="" class="call-center"></div>
+            </form>
+        </div>
 	</div>	
 
     	<!-- CONTENT -->
@@ -158,62 +164,103 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
 		<script type="text/javascript">
-	$('#city-app').select2({
-      placeholder: 'Selecciona ciudad',
-      ajax: {
-        url: 'https://label-hidden/api/v1/cities',
-        dataType: 'json',
-        delay: 250,
-        processResults: function (data) {
-          return {
-            results:  $.map(data, function (item) {
-				return {
-					  // local:sessionStorage.setItem("idcityApp", JSON.stringify(item.id)),
-                      text: item.city,
-                      id: item.id
-                  }
-              })
-          };
-        },
-        cache: true
-      }
-	});
-	</script>
+			$('#sendData').click(function(e){
+					e.preventDefault();
+					setTimeout(function(){
+						window.location.href = "list.html"    
+						console.log("listo");
+					},5000);
+				});
+			$('#city-app').select2({ 
+			  placeholder: 'Selecciona ciudad',
+			  ajax: {
+				url: 'http://206.189.205.135/api/v1/cities',
+				dataType: 'json',
+				delay: 250,
+				processResults: function (data) {
+				  return {
+					results:  $.map(data, function (item) {
+						return {
+							  // local:sessionStorage.setItem("idcityApp", JSON.stringify(item.id)),
+							  text: item.city,
+							  id: item.id
+						  }
+					  })
+				  };
+				},
+				cache: true
+			  }
+			});
+			$(function() {
+					$("#checkin-app").datepicker({
+						defaultDate: "+0",
+						dateFormat: "yy-mm-dd",
+						minDate: "+0",
+						onSelect: function(dateText, inst) {
+							var d = $.datepicker.parseDate(inst.settings.dateFormat, dateText);
+							d.setDate(d.getDate() + 1);
+							$("#checkout-app").val($.datepicker.formatDate(inst.settings.dateFormat, d));
+						},
+		
+						onClose: function(selectedDate) {
+							$("#checkout-app").datepicker("option", "minDate", selectedDate);
+						}
+					});
+				});
+				$(function() {
+					$("#checkout-app").datepicker({
+						defaultDate: "+0",
+						dateFormat: "yy-mm-dd",
+						minDate: "+0",
+						onSelect: function(dateText, inst) {
+							var d = $.datepicker.parseDate(inst.settings.dateFormat, dateText);
+							d.setDate(d.getDate() + 1);
+							$("#checkout-app").val($.datepicker.formatDate(inst.settings.dateFormat, d));
+						},
+						onClose: function(selectedDate) {
+							$("#checkout-app").datepicker("option", "minDate", selectedDate);
+						}
+					});
+				});
+		</script>
 		<!-- endmenumobile -->
-    <!-- end content app list -->
+		<!-- end content app list -->
 		<script defer src="https://use.fontawesome.com/releases/v5.0.12/js/all.js" integrity="sha384-Voup2lBiiyZYkRto2XWqbzxHXwzcm4A5RfdfG6466bu5LqjwwrjXCMBQBLMWh7qR" crossorigin="anonymous"></script>
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="../assets/js/jquery.mobile.datepicker.js"></script>
+		<script src="../assets/js/external/jquery-ui/datepicker.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
 		<!-- Javascript -->
-		<!-- <script src="../assets/js/detail.js"></script> -->
 		<script src="../assets/js/app.js"></script>
-			<!-- This page JS -->
-		<script src="../assets/js/js-index3.js"></script>	
-		
-			<!-- Custom functions -->
-			<script src="../assets/js/functions.js"></script>
-		
-			<!-- Picker UI-->	
-		<script src="../assets/js/jquery-ui.js"></script>		
-		
+		<!-- This page JS -->
+		<script src="../assets/js/js-index3.js"></script>
+	
+		<!-- Custom functions -->
+		<script src="../assets/js/functions.js"></script>
+	
+		<!-- Picker UI-->
+		<script src="../assets/js/jquery-ui.js"></script>
+	
 		<!-- Easing -->
-			<script src="../assets/js/jquery.easing.js"></script>
-		
-			<!-- jQuery KenBurn Slider  -->
-			<script type="text/javascript" src="../rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-		
-		 <!-- Nicescroll  -->	
+		<script src="../assets/js/jquery.easing.js"></script>
+	
+		<!-- jQuery KenBurn Slider  -->
+		<script type="text/javascript" src="../rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+	
+		<!-- Nicescroll  -->
 		<script src="../assets/js/jquery.nicescroll.min.js"></script>
-		
-			<!-- CarouFredSel -->
-			<script src="../assets/js/jquery.carouFredSel-6.2.1-packed.js"></script>
-			<script src="../assets/js/helper-plugins/jquery.touchSwipe.min.js"></script>
+	
+		<!-- CarouFredSel -->
+		<script src="../assets/js/jquery.carouFredSel-6.2.1-packed.js"></script>
+		<script src="../assets/js/helper-plugins/jquery.touchSwipe.min.js"></script>
 		<script type="text/javascript" src="../assets/js/helper-plugins/jquery.mousewheel.min.js"></script>
 		<script type="text/javascript" src="../assets/js/helper-plugins/jquery.transit.min.js"></script>
 		<script type="text/javascript" src="../assets/js/helper-plugins/jquery.ba-throttle-debounce.min.js"></script>
-		
-			<!-- Custom Select -->
-		<script type='text/javascript' src='../assets/js/jquery.customSelect.js'></script>	
 	
-			<!-- Include all compiled plugins (below), or include individual files as needed -->
-			<script src="../dist/js/bootstrap.min.js"></script>
+		<!-- Custom Select -->
+		<script type='text/javascript' src='../assets/js/jquery.customSelect.js'></script>
+	
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="../dist/js/bootstrap.min.js"></script>
   </body>
 </html>

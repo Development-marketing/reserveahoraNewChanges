@@ -40,6 +40,7 @@
 </head>
 
 <body id="top">
+    <div class="loader-page"></div>
     <!-- header app -->
     <div class="header-app">
         <div class="father-logo">
@@ -343,7 +344,7 @@
         $('#city-app').select2({
         		    placeholder: 'Selecciona ciudad',
         		    ajax: {
-        		        url: 'https://7e419525.ngrok.io/api/v1/cities',
+        		        url: 'http://206.189.205.135/api/v1/cities',
         		        dataType: 'json',
         		        delay: 250,
         		        processResults: function(data) {
@@ -370,7 +371,7 @@
         		$(function() {
         		    $("#checkin-app").datepicker({
         		        defaultDate: "+0",
-        		        dateFormat: "yy-mm-dd",
+        		        dateFormat: "dd-mm-yy",
         		        minDate: "+0",
         		        onSelect: function(dateText, inst) {
         		            var d = $.datepicker.parseDate(inst.settings.dateFormat, dateText);
@@ -386,7 +387,7 @@
         		$(function() {
         		    $("#checkout-app").datepicker({
         		        defaultDate: "+0",
-        		        dateFormat: "yy-mm-dd",
+        		        dateFormat: "dd-mm-yy",
         		        minDate: "+0",
         		        onSelect: function(dateText, inst) {
         		            var d = $.datepicker.parseDate(inst.settings.dateFormat, dateText);

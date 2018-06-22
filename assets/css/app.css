@@ -1,4 +1,4 @@
-*{margin: 0;padding: 0;}
+*{margin: 0;padding: 0;font-family: 'Roboto';}
 /* header styles app */
 .header-app{
     background: white;
@@ -59,6 +59,9 @@
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+}
+.dropdown-content a:hover{
+    text-decoration: none;
 }
 .a-user{
     background: #4caf50;
@@ -155,7 +158,7 @@
 		justify-content: space-around;
 		flex-direction: column;	
 	}
-	.div-father-dates{
+	.div-father-dates,.div-father-datesDetails{
 		display: flex;
 		justify-content: space-between;
 		width:100%;
@@ -163,7 +166,7 @@
 		margin-bottom: 2vh;
 		align-items: center;
 	}
-	.div-father-input-from{
+	.div-father-input-from,.div-father-input-fromDetail{
 		width:100%;
 	}
 	.input-date,.input-childrens,.input-adults{
@@ -177,7 +180,7 @@
 		padding:0px 2vh;
 		border-right:10px solid #001371;
 	}
-	.button-send{
+	.button-send,.button-sendDetail{
 		background: #ff0000;
         width: 25%;
         display: flex;
@@ -204,7 +207,6 @@
 	}
 	.div-content-slider iframe{
 		position: absolute;
-        z-index: 1;
         border-radius: 50%;
 		margin:-18vh 8.8vh;
 	}
@@ -548,8 +550,17 @@ display: flex;justify-content: center;align-items: center;border:3px solid white
     justify-content: center;
     align-items: center;
 }
+.div-scureOpacity{
+    background-color:#001371;
+    width: 100%;
+    opacity: 0.3;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .div-row1Applogin{
-    width: 40%;
+    width: 55%;
     background-image: url("../../images/apartament.jpg");
     height: 100vh;
     display: flex;
@@ -558,85 +569,165 @@ display: flex;justify-content: center;align-items: center;border:3px solid white
     background-position: center;
     background-size: cover;
 }
+.div-row1Applogin h1{
+    position: absolute;
+    width:30%;
+    text-align: center;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
 .div-row2Applogin{
-    background: #cee2f2;
-    width: 60%;
+    /* background-image: linear-gradient(#D8E4E9,rgb(134, 195, 221)); */
+    background: linear-gradient(to right,#8cc7f7,#afd9ff);
+    color: #000000;
+    border-radius: 5px 5px 5px 5px;
+    border-style: none;
+    width: 45%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 100vh;
 }
-.div-row2Applogin form{
+.div-row2Applogin form,.div-row2AppDetail form{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width:70%;
-    height:60vh;
+    height:68vh;
     padding-bottom: 5vh;
 }
-.div-row2Applogin img{
+.div-row2AppDetail form{
+    height: 75vh;
+}
+.div-row2Applogin img,.div-row2AppDetail img{
     width: 100px;
     height: auto;
+    margin-bottom: 3vh;
 }
-.div-row2Applogin h1{
+.div-row2Applogin h1,.div-row2AppDetail h1{
     font-size:45px;
-    font-family: 'Roboto';
-    color: #555;
+    color: #fff;
+    margin-bottom: 2vh;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
 }
-.div-fatherInput{
+.div-fatherInput,.div-fatherInputDetail,.div-fatherInputDetail2{
     width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.div-fatherInput input{
+.div-fatherInputDetail,.div-fatherInputDetail2{
+    width: 90%;
+}
+.div-fatherInputDetail2{
+    flex-direction: column;
+}
+.div-fatherInput input,.div-fatherInputDetail input,.div-fatherInputDetail2 input{
     width: 90%;
     height: 5vh;
     border: none;
-    margin: 1vh;
+    margin: 2.5vh;
     padding-left: 1vh;
     border-radius: 6px;
     font-family: 'Roboto';
     outline: none;
+    margin-top: 4vh;
     transition: .2s all ease;
+    color: #999;
 }
-.div-fatherInput input:focus{
-    background: none;
-    border-bottom: 2px solid #2980b9;
-    transition: .2s all ease-in;
+.div-fatherInputDetail input,.div-fatherInputDetail2 input{
+    margin: 0;
+    margin: 2px;
+    margin-top: 1.5vh;
 }
-.div-row2Applogin button{
+.div-fatherInputDetail input:nth-child(2){
+    width:60%;
+}
+.div-fatherInputDetail2 input{
+    width: 100%;
+}
+.div-row2Applogin button,.div-row2AppDetail button{
     background: #ff0000;
     border: none;
     width:40vh;
-    margin-top: 5vh;
-    height: 6vh;
+    margin-top: 3vh;
+    height: 8vh;
     border-radius: 6px;
     color: white;
     font-family: 'Roboto';
     font-size: 18px;
+    font-weight: bold;
+}
+.div-row2AppDetail button{
+    height: 6vh;
+    font-weight: bold;
+    background: #001371;
+    margin-bottom: 6vh;
 }
 .div-aItems{
-    width: 55vh;
+    width:70%;
     height: 7vh;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 5vh;
+    justify-content: center ;
+    align-items: center ;
+    flex-direction: column;
+    margin-top:3vh;
 }
-.div-aItems a{
+.div-aItems a,.div-noHaveAccount a{
     height: 6vh;
-    background: #001371;
-    color: white;
+    color: #001a6e;
     width:40%;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Roboto';
+    font-size: 13px;
     border-radius:6px;
+    text-align: center;
+}   
+.div-aItems a:hover{
+    text-decoration: none;
+    color: white;
+}
+.div-row2AppDetail h1:nth-child(1){
+    color: #333;
 }
 /* end login app styles */
+/* SignUpStyles */
+.div-scureOpacity:nth-child(1){
+    background: #2196f3;
+}
+.div-row1Applogin:nth-child(1){
+    background-image: url("../../images/background2.jpg");
+}
+.div-row2AppDetail{
+    background-color: #ecf0f1;
+    width: 45%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div-noHaveAccount{
+    border-top: 2px solid silver;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+.div-noHaveAccount a{
+    margin-left: 1vh;
+    font-weight: bold;
+}
+.div-noHaveAccount p{
+    font-size:18px;
+    margin-top: 1px;
+}
+/* endSignUpStles */
 /* book init styles */
 .div-contentBook{
     width: 100%;
@@ -821,7 +912,6 @@ height: auto;padding: 3vh;}
     background: #f2f2f2;
     margin-bottom: 5vh;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    border-radius: 5px;
 }
 .rowContent1{
     display: flex;
@@ -836,6 +926,7 @@ height: auto;padding: 3vh;}
     height:170px;
     border: 4px solid #fff;
     background-color: #e6ecf0;
+    border-radius: 5px;
 }
 .mediafix1{
     width: 100%;
@@ -845,6 +936,79 @@ height: auto;padding: 3vh;}
     align-items: center;
     flex-direction: column;
 }
+/* details calendar */
+.div-calendar-details{
+    width: 100%;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    margin-top: -5vh;
+}
+.div-flexdetails,.div-father-datesDetails,.form-appDetails{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.form-appDetails{flex-direction: column;}
+.div-father-input-fromDetail{width: 30%;margin: 10px;}
+.div-father-datesDetails input{
+    border: none;
+    margin: 4px;
+    background-color: #fff;
+    border-radius: 5px;
+    font-family: 'Roboto';
+}
+.button-sendDetail{
+    width: 100%;
+    border-radius: 5px;
+    background-color: #001371;
+}
+/* preloader */
+.loader-page {
+    position: fixed;
+    z-index: 25000;
+    background: rgb(255, 255, 255);
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:all .3s ease;
+  }
+  .loader-page::before {
+    content: "";
+    position: absolute;
+    border: 2px solid rgb(50, 150, 176);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border-left: 2px solid rgba(50, 150, 176,0);
+    border-top: 2px solid rgba(50, 150, 176,0);
+    animation: rotarload 1s linear infinite;
+    transform: rotate(0deg);
+  }
+  @keyframes rotarload {
+      0%   {transform: rotate(0deg)}
+      100% {transform: rotate(360deg)}
+  }
+  .loader-page::after {
+    content: "";
+    position: absolute;
+    border: 2px solid rgba(50, 150, 176,.5);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border-left: 2px solid rgba(50, 150, 176, 0);
+    border-top: 2px solid rgba(50, 150, 176, 0);
+    animation: rotarload 1s ease-out infinite;
+    transform: rotate(0deg);
+  }
+/* end preloader */
 @media (max-width:1200px) {
     .a-logo-maxwidth,.call-center,.div-content-slider,.div-contenedorSession,.divContentLogo,
     .divContentItems div:nth-child(4),.div-slider{display: none;}
