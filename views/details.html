@@ -223,6 +223,28 @@
 					});
 				});
 		</script>
+<!-- 
+	$('#city-app').select2({
+      placeholder: 'Selecciona ciudad',
+      ajax: {
+        url: 'https://label-hidden/api/v1/cities',
+        dataType: 'json',
+        delay: 250,
+        processResults: function (data) {
+          return {
+            results:  $.map(data, function (item) {
+				return {
+					  // local:sessionStorage.setItem("idcityApp", JSON.stringify(item.id)),
+                      text: item.city,
+                      id: item.id
+                  }
+              })
+          };
+        },
+        cache: true
+      }
+	});
+	</script> -->
 		<!-- endmenumobile -->
 		<!-- end content app list -->
 		<script defer src="https://use.fontawesome.com/releases/v5.0.12/js/all.js" integrity="sha384-Voup2lBiiyZYkRto2XWqbzxHXwzcm4A5RfdfG6466bu5LqjwwrjXCMBQBLMWh7qR" crossorigin="anonymous"></script>

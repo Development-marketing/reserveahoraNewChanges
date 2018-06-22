@@ -345,6 +345,7 @@
         		    placeholder: 'Selecciona ciudad',
         		    ajax: {
         		        url: 'http://206.189.205.135/api/v1/cities',
+        		        url: 'https://8a63ce94.ngrok.io/api/v1/cities',
         		        dataType: 'json',
         		        delay: 250,
         		        processResults: function(data) {
@@ -372,6 +373,7 @@
         		    $("#checkin-app").datepicker({
         		        defaultDate: "+0",
         		        dateFormat: "dd-mm-yy",
+        		        dateFormat: "yy-mm-dd",
         		        minDate: "+0",
         		        onSelect: function(dateText, inst) {
         		            var d = $.datepicker.parseDate(inst.settings.dateFormat, dateText);
@@ -388,6 +390,7 @@
         		    $("#checkout-app").datepicker({
         		        defaultDate: "+0",
         		        dateFormat: "dd-mm-yy",
+        		        dateFormat: "yy-mm-dd",
         		        minDate: "+0",
         		        onSelect: function(dateText, inst) {
         		            var d = $.datepicker.parseDate(inst.settings.dateFormat, dateText);
